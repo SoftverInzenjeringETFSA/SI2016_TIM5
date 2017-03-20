@@ -1,1 +1,3 @@
-# SI2016_TIM5
+# Konferencija - chair programme
+
+#Tim5
