@@ -8,10 +8,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('info');
-  this.route('organizacija');
-  this.route('raspored');
-  this.route('sadržaj');
-  this.route('put-i-smještaj');
+  this.route('organization');
+  this.route('program');
+  this.route('schedule');
+  this.route('travel-accomodation');
 });
 
 export default Router;
