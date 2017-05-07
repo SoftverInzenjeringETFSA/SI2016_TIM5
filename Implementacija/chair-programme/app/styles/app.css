@@ -35,12 +35,26 @@ section {
 	color: #4c4e4f;
 }
 
+.xsm-txt {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	color: #4c4e4f;
+}
+
 .year-stamp { 
 	font-family: 'Rubik', sans-serif; 
 	font-weight: 300;
 	font-size: .8em;
 	letter-spacing: 0px;
 	color: #545555;
+}
+
+.sm-padding-top {
+	padding-top: 15px;
+}
+
+.sm-padding-bottom {
+	padding-bottom: 15px;
 }
 
 /* Bootstrap navbar override */
