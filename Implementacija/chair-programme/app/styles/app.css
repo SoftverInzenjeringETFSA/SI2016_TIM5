@@ -1,0 +1,195 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700&subset=latin-ext');
+
+/* Global */
+body {
+	font-family: 'Rubik', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin:0 auto;
+	background: #fff;
+	max-width: 100%;
+	overflow-x: hidden!important;
+}
+
+section {
+	padding-top: 20px;
+}
+
+.bg-txt {
+	font-size: 2.5em;
+	line-height: 45px;
+	color: #1d1d1d;
+}
+
+.md-txt {
+	font-size: 1.8em;
+	color: #303538;
+}
+
+.sm-txt {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	color: #4c4e4f;
+}
+
+.xsm-txt {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	color: #4c4e4f;
+}
+
+.year-stamp { 
+	font-family: 'Rubik', sans-serif; 
+	font-weight: 300;
+	font-size: .8em;
+	letter-spacing: 0px;
+	color: #545555;
+}
+
+.sm-padding-top {
+	padding-top: 15px;
+}
+
+.sm-padding-bottom {
+	padding-bottom: 15px;
+}
+
+/* Bootstrap navbar override */
+.navbar-default .navbar-brand { color: #1d1d1d;  font-weight: 400; }
+.navbar-default .navbar-brand:hover { color: #1d1d1d; }
+.navbar-brand { padding: 50px 15px; }
+.navbar { min-height: 110px; border-radius: 0px; margin-bottom: 0px; }
+
+.nav-logo {
+	font-family: 'Rubik', sans-serif;
+	font-size: 3em;
+	letter-spacing: -.8px;
+	font-weight: 400;
+}
+
+.footer-logo { float: left; padding-top: 22px; }
+.footer-logo a {
+	color: #fff;
+}
+
+/* Jumbotron style */
+.actis-jumbotron {
+	width: 100%;
+	background-image: url('/assets/images/jumbo-bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.jumbotron-content-holder {
+	padding: 100px 0;
+}
+
+.organizing-committee-holder { padding-top: 80px; }
+
+/* Sponsors section style */
+.sponsors-section-holder {
+	background-color: #e7e9ea;
+	/*margin-top: 60px;*/
+	padding-top: 20px;
+}
+.sponsors-ul {
+	margin: auto;
+	list-style-type: none;
+}
+.sponsors-ul li { float: left; padding: 40px 40px; }
+
+/* Footer style */
+.main-footer { background-color: #2e3137; }
+.footer-copyright { 
+	float: left; 
+	padding: 35px 12px; 
+	color: #fff; 
+	font-weight: 300;
+}
+.footer-copyright p { margin-bottom: 0; font-weight: 300; }
+footer .year-stamp { color: #fff; }
+
+
+@media (min-width: 768px) {
+	.navbar-nav > li > a {
+		font-family: 'Open Sans', sans-serif;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		font-size: 16px;
+	}
+}
+
+
+.navbar {
+	margin-bottom: 0!important;
+}
+
+
+
+/* Home page */
+
+#index {
+	padding: 30px;
+	background-image: url('/assets/images/cover.jpg');
+  	background-repeat: no-repeat, no-repeat;
+  	background-size:cover;
+  	height: auto;
+  	background-position: center;
+  	background-attachment: fixed;
+  	height: 100%;
+}
+
+
+#index .about {
+	background: rgba(0, 0, 0, .6);
+	height: auto;
+	padding: 20px;
+}
+
+#index .about-title h4 {
+	color: #fefefe;
+	font-size: 26px;
+}
+
+#index .about-details {
+	color: #fefefe;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 50px;
+    padding: 20px;
+}
+
+
+/* SCHEDULE */
+
+#schedule div.main-list div.dow.row div.dow-content div.schedule-item {
+    border-bottom: 1px solid #ccc;
+    padding: 30px;
+    background-color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+#schedule div.main-list div.dow.row div.dow-content div.schedule-item .sch_content-wrapper h3 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #1ca093;
+}
+
+#schedule div.main-list div.dow.row div.dow-content div.schedule-item .time-wrapper {
+    text-align: left;
+    color: #333;
+    font-size: 1.2em;
+}
+
+#schedule div.main-list div.dow.row div.dow-label small {
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 14px;
+
+}
