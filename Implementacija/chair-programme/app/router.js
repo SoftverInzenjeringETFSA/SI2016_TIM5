@@ -12,6 +12,8 @@ Router.map(function() {
   this.route('program');
   this.route('schedule');
   this.route('travel-accomodation');
+  this.route('login');
+  this.route('register');
 });
 
 export default Router;
