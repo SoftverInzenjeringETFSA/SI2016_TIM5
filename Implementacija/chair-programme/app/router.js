@@ -13,7 +13,7 @@ Router.map(function() {
   this.route('schedule');
   this.route('travel-accomodation');
   this.route('login');
-  this.route('register');
+  this.route('register', { path: '/Users' });
 });
 
 export default Router;
