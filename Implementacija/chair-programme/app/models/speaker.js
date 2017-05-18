@@ -6,5 +6,5 @@ export default DS.Model.extend({
   cv: DS.attr("string"),
   imageLink: DS.attr("string"),
   info: DS.attr("string"),
-  link: DS.attr("string")
+  link: DS.attr("string"),
 });

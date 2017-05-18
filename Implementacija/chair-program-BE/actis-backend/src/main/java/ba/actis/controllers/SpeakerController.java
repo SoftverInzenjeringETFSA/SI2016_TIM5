@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import ba.actis.assembler.SpeakerResourceAssembler;
+import ba.actis.beans.Speaker;
 import ba.actis.exceptions.EntityNotFoundException;
-import ba.actis.models.Speaker;
 import ba.actis.store.SpeakerRepository;
 
 

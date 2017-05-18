@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import ba.actis.models.Speaker;
+import ba.actis.beans.Speaker;
 
 
 @Repository

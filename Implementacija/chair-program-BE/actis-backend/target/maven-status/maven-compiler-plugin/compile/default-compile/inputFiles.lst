@@ -1,7 +1,7 @@
-C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\assembler\SpeakerResourceAssembler.java
-C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\exceptions\EntityNotFoundException.java
-C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\controllers\SpeakerController.java
-C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\models\Speaker.java
-C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\store\SpeakerRepository.java
-C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\StartApplication.java
-C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\controllers\ControllerExceptionHandler.java
+C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\assembler\SpeakerResourceAssembler.java
+C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\beans\Speaker.java
+C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\controllers\SpeakerController.java
+C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\controllers\ControllerExceptionHandler.java
+C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\store\SpeakerRepository.java
+C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\exceptions\EntityNotFoundException.java
+C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\StartApplication.java
