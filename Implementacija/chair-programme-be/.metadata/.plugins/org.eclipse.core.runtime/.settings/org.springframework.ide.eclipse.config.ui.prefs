@@ -1,2 +1,5 @@
 //com.springsource.config.ui.prefs.activePageIndex\:/actis-backend/src/main/webapp/INFO/appconfig-data.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/actis-backend/src/main/webapp/INFO/appconfig-mvc.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/actis-backend/src/main/webapp/INFO/appconfig-root.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/actis-backend/src/main/webapp/INFO/appconfig-security.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
 eclipse.preferences.version=1

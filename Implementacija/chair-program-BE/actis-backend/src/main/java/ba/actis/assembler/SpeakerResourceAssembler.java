@@ -1,0 +1,19 @@
+package ba.actis.assembler;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.ResourceAssembler;
+import org.springframework.stereotype.Component;
+
+import ba.actis.models.Speaker;
+
+@Component
+public class SpeakerResourceAssembler implements ResourceAssembler<Speaker, Resource<Speaker>> {
+
+  @Override
+    public Resource<Speaker> toResource(Speaker Speaker) {
+        Resource<Speaker> resource = new Resource<>(Speaker);
+        resource.add(new Link("http://speakers/" + Speaker.getId()).withSelfRel());
+        return resource;
+    }
+  
+}

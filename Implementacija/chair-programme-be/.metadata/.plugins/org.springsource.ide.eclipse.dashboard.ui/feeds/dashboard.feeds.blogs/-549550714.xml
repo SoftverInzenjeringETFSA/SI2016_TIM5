@@ -5,7 +5,89 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-05-16T15:20:00Z</updated>
+  <updated>2017-05-17T17:14:18Z</updated>
+  <entry>
+    <title>Spring Cloud Stream Chelsea.SR2 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/05/17/spring-cloud-stream-chelsea-sr2-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Soby Chacko</name>
+    </author>
+    <id>tag:spring.io,2017-05-17:2929</id>
+    <updated>2017-05-17T17:14:18Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the community, I am happy to announce the release of Spring Cloud Stream Chelsea.SR2. This is the second general availability release in the Chelsea release train, which fixes a number of issues over Chelsea.SR1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The new release is available in Maven Central, and a detailed description of its features can be found in the &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/Chelsea.SR2/reference/htmlsingle/"&gt;reference documentation&lt;/a&gt;. For information about artifacts and most recent changes, please consult the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-starters/releases/tag/vChelsea.SR2"&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="what-is-next"&gt;&lt;a class="anchor" href="#what-is-next"&gt;&lt;/a&gt;What is next:&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;After the release, we will start working on the next Spring Cloud Stream release train, named &lt;code&gt;Ditmars&lt;/code&gt;, as well as expand the Spring Cloud Stream ecosystem.
+In parallel with developing the &lt;code&gt;Ditmars&lt;/code&gt; release train, we will start work on the &lt;code&gt;Elmhurst&lt;/code&gt; release train which will be based on Spring Framework 5 and Spring Boot 2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="here-are-some-of-the-upcoming-themes"&gt;&lt;a class="anchor" href="#here-are-some-of-the-upcoming-themes"&gt;&lt;/a&gt;Here are some of the upcoming themes:&lt;/h3&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Improving error handling support in the binder, as well as providing a user-friendly API for recovery and error handling&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Milestone (1.0.0.M1) release for the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-jms"&gt;JMS binder&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Introduce &lt;a href="https://twitter.com/mariusbogoevici/status/864317403785809921"&gt;Kafka Streams support in kafka binder&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reactive sources&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Performance benchmarking&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="acknowledgments"&gt;&lt;a class="anchor" href="#acknowledgments"&gt;&lt;/a&gt;Acknowledgments&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I would like to thank everyone involved for their support. In particular, I would like to extend special thanks to the community members that have contributed to this release by opening issues or providing patches:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Simon Flandergan (&lt;a href="https://github.com/sflandergan"&gt;@sflandergan&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Henryk Konsek (&lt;a href="https://github.com/hekonsek"&gt;@hekonsek&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Felipe Rotilho (&lt;a href="https://github.com/rotilho"&gt;@rotilho&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Jon Archer (&lt;a href="https://github.com/jonarcher"&gt;@jonarcher&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Howard (&lt;a href="https://github.com/kelseyh"&gt;@kelseyh&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Javier Sainz (&lt;a href="https://github.com/FcoJavierSainz"&gt;@FcoJavierSainz&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;lwshuo (&lt;a href="https://github.com/lwshuo"&gt;@lwshuo&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;odedia (&lt;a href="https://github.com/odedia"&gt;@odedia&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As always, you can stay in touch with us either in &lt;a href="https://github.com/spring-cloud/spring-cloud-stream"&gt;GitHub&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Stack Overflow&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud-stream"&gt;Gitter&lt;/a&gt;, or on &lt;a href="https://twitter.com/springcloud"&gt;Twitter&lt;/a&gt; (hashtag #Stream or #SpringCloudStream).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Reactor Bismuth release train first milestone available</title>
     <link rel="alternate" href="https://spring.io/blog/2017/05/16/reactor-bismuth-release-train-first-milestone-available" />
@@ -243,11 +325,12 @@ Rather than fixing the compilation error at face value, you&amp;#8217;d need to 
       <name>Josh Long</name>
     </author>
     <id>tag:spring.io,2017-05-16:2928</id>
-    <updated>2017-05-16T09:48:07Z</updated>
+    <updated>2017-05-16T09:48:00Z</updated>
     <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I am in &lt;a href="https://www.meetup.com/Spring-Meetup-Munich/events/238276763/"&gt;Munich for the Spring Meetup&lt;/a&gt;; Berlin for &lt;a href="https://www.netways.de/?id=2567&amp;L=1"&gt;OSDC&lt;/a&gt;; Krakow for &lt;a href="https://2017.geecon.org/schedule-day2/"&gt;Geecon&lt;/a&gt;; Barcelona for &lt;a href="http://2017.springio.net/"&gt;Spring I/O&lt;/a&gt;, and Eindhoven for &lt;a href="http://nextbuild.nl/speakers/josh-long/"&gt;NextBuild&lt;/a&gt;. If you&amp;rsquo;re around, &lt;a href="http://twitter.com/starbuxman"&gt;say hi&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As usual, we&amp;rsquo;ve got a lot to cover so let&amp;rsquo;s get to it!&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Dr. Mark Pollack &lt;a href="https://spring.io/blog/2017/05/15/spring-cloud-data-flow-1-2-ga-released"&gt;just announced Spring Cloud Data Flow 1.2GA!&lt;/a&gt;, including the server editions for local, Kubernetes, YARN and Cloud Foundry. This new release is &lt;em&gt;packed&lt;/em&gt; with good stuff. I particularly like the support for composed tasks, which lets me orchestrate a flow of tasks as a cohesive unit-of-work. This is ideal for complex ETL pipelines. It even includes support for sequential, parallel, and conditional sequence transitions. And, of course, all of this can be mixed-and-matched. Previously, to get this kind of power, you had to manually wire up remote partitioning in a Spring Batch job. Or setup some very complicated Spring Integration flow. And neither would&amp;rsquo;ve given me everything this does. It also includes support for better runtime visibility into what is happening, OAuth support, role-based access, and much more. This is a &lt;em&gt;very&lt;/em&gt; cool release! Get the bits and try it out now!&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2017/05/16/spring-boot-2-0-0-m1-available-now"&gt;Spring Boot 2.0M1 has just been released!&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2017/05/15/spring-batch-4-0-0-m2-is-now-available"&gt;Spring Batch 4 keeps chugging along&lt;/a&gt;! The new milestone includes updates to the Java configuration API (new builders!) and dependdency updates.&lt;/li&gt;
   &lt;li&gt;Spring REST Docs lead Andy Wilkinson has just &lt;a href="https://spring.io/blog/2017/05/12/spring-rest-docs-1-2-1-release"&gt;published a maintenance release&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Spring Security lead Rob Winch just &lt;a href="https://spring.io/blog/2017/05/11/spring-security-5-0-0-m1"&gt;announced the first Milestone of the new 5.0 line&lt;/a&gt;. The new release includes OAuth 2.0 and OpenID connect 1.0 support as well as reactive integration!&lt;/li&gt;
@@ -945,29 +1028,5 @@ Feedback, feature requests and, of course, contributions are welcomed via the us
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="http://projects.spring.io/spring-kafka/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-kafka"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-kafka"&gt;Chat&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Task 1.2.0.RELEASE is now available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/04/25/spring-cloud-task-1-2-0-release-is-now-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Glenn Renfro</name>
-    </author>
-    <id>tag:spring.io,2017-04-24:2909</id>
-    <updated>2017-04-25T14:50:33Z</updated>
-    <content type="html">&lt;p&gt;We are pleased to announce that Spring Cloud Task 1.2.0.RELEASE is now available via Github, Maven Central, and the Pivotal download repository. Many thanks to all of those who contributed to this release. This release represents the first GA release of the 1.2 line.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new-in-spring-cloud-task-1-2-0-release" class="anchor" name="what-rsquo-s-new-in-spring-cloud-task-1-2-0-release"&gt;&lt;/a&gt;What&amp;rsquo;s new in Spring Cloud Task 1.2.0.RELEASE&lt;/h2&gt;
-&lt;p&gt;The Spring Cloud Task 1.2.0.RELEASE is intended to continue the integrations required for Spring Cloud Data Flow, this release provides the following features.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Better &lt;code&gt;DataSource&lt;/code&gt; integration between task and batch - This release makes configuring a shared &lt;code&gt;DataSource&lt;/code&gt; between task and batch repositories to be simpler.&lt;/li&gt;
-  &lt;li&gt;Allow the user to easily configure a prefix for the task tables - Similar to how Spring Batch allows a user to configure a prefix for the batch repository tables, Spring Cloud Task now exposes the ability to configure a prefix for task repository tables via a Spring Boot property.&lt;/li&gt;
-  &lt;li&gt;Allows an external process to update the external execution id - Prior to this release, the external execution id (the execution id for the underlying platform) had to be updated by the task itself. In some use cases, this is not possible. This release exposes the ability to update the external execution id outside the scope of the task itself.&lt;/li&gt;
-  &lt;li&gt;Add support for parent execution ids - In complex use cases, the ability for one task to launch multiple other tasks is very common. Spring Cloud Task has already supported this via partitioned batch jobs launching worker nodes as tasks. This release provides the ability within the task repository to associate the parent child relationship that occurs from that capability (both in the batch use case and with raw tasks).&lt;/li&gt;
-  &lt;li&gt;Task name can be set when creating a &lt;code&gt;TaskExecution&lt;/code&gt; externally, allowing the launcher to set the name in a persistent manor.&lt;/li&gt;
-  &lt;li&gt;Added &lt;code&gt;Ordered&lt;/code&gt; Interface to Task Events and Batch Job Events so the user can establish when task or batch events are emitted from their Spring Cloud Task application.&lt;/li&gt;
-  &lt;li&gt;Renamed &lt;code&gt;closecontext.enable&lt;/code&gt; to &lt;code&gt;closecontext.enabled&lt;/code&gt; as to match the Spring Boot style for enabled properties.&lt;/li&gt;
-  &lt;li&gt;Various bug fixes and documentation updates.&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#what-do-you-think" class="anchor" name="what-do-you-think"&gt;&lt;/a&gt;What do you think?&lt;/h2&gt;
-&lt;p&gt;We look forward to your feedback on these new features in &lt;a href="https://github.com/spring-cloud/spring-cloud-task/issues"&gt;Github&lt;/a&gt;, &lt;a href="http://stackoverflow.com/tags/spring-cloud-task"&gt;StackOverflow&lt;/a&gt;, or to me directly via Twitter &lt;a href="https://twitter.com/cppwfs"&gt;@cppwfs&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://cloud.spring.io/spring-cloud-task/"&gt;Spring Cloud Task Home&lt;/a&gt; | &lt;a href="https://github.com/spring-cloud/spring-cloud-task"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-cloud-task/docs/1.2.0.RELEASE/reference/htmlsingle/"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

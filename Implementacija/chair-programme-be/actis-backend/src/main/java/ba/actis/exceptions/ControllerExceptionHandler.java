@@ -7,13 +7,14 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+
 @ControllerAdvice
 public class ControllerExceptionHandler {
-	private static final Logger LOG = Logger.getLogger(ControllerExceptionHandler.class.getName());
-	
-	@ResponseStatus(HttpStatus.NOT_FOUND)
-	@ExceptionHandler(value = { EntityNotFoundException.class })
-	public void entityNotFoundException(Exception e) {
-		LOG.log(Level.SEVERE, e.getMessage(), e);
-	}
+	 private static final Logger LOG = Logger.getLogger(ControllerExceptionHandler.class.getName());
+
+	  @ResponseStatus(HttpStatus.NOT_FOUND)
+	  @ExceptionHandler(value = { EntityNotFoundException.class })
+	  public void entityNotFoundException(Exception e) {
+	    LOG.log(Level.SEVERE, e.getMessage(), e);
+	  }
 }

@@ -1,0 +1,29 @@
+package ba.actis.controllers;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import models.Speaker;
+import repositories.SpeakerRepository;
+
+
+@RestController
+@RequestMapping("/speakers")
+public class SpeakerController {
+
+	  private final SpeakerRepository speakerRepository;
+
+	  @Autowired
+	  public SpeakerController(SpeakerRepository repository) {
+	    this.speakerRepository = repository;
+	  }
+	  
+	  @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	  Speaker getSpeaker(@PathVariable("id") Integer id) {
+	    return speakerRepository.findById(id);
+	  }
+}

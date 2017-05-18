@@ -1,0 +1,5 @@
+zuul:
+  routes:
+    adminui:
+      path: /**
+      url: http://localhost:4200/
