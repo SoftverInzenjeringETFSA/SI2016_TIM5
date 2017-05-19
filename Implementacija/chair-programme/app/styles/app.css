@@ -42,8 +42,8 @@ section {
 	color: #4c4e4f;
 }
 
-.year-stamp { 
-	font-family: 'Rubik', sans-serif; 
+.year-stamp {
+	font-family: 'Rubik', sans-serif;
 	font-weight: 300;
 	font-size: .8em;
 	letter-spacing: 0px;
@@ -79,7 +79,7 @@ section {
 /* Jumbotron style */
 .actis-jumbotron {
 	width: 100%;
-	background-image: url('/assets/images/jumbo-bg.png');
+	background-image: url('../assets/images/jumbo-bg.png');
 	background-size: cover;
 	background-repeat: no-repeat;
     background-position: center center;
@@ -105,10 +105,10 @@ section {
 
 /* Footer style */
 .main-footer { background-color: #2e3137; }
-.footer-copyright { 
-	float: left; 
-	padding: 35px 12px; 
-	color: #fff; 
+.footer-copyright {
+	float: left;
+	padding: 35px 12px;
+	color: #fff;
 	font-weight: 300;
 }
 .footer-copyright p { margin-bottom: 0; font-weight: 300; }
@@ -135,7 +135,7 @@ footer .year-stamp { color: #fff; }
 
 #index {
 	padding: 30px;
-	background-image: url('/assets/images/cover.jpg');
+	background-image: url('../assets/images/cover.jpg');
   	background-repeat: no-repeat, no-repeat;
   	background-size:cover;
   	height: auto;
@@ -237,8 +237,8 @@ section {
 	color: #4c4e4f;
 }
 
-.year-stamp { 
-	font-family: 'Rubik', sans-serif; 
+.year-stamp {
+	font-family: 'Rubik', sans-serif;
 	font-weight: 300;
 	font-size: .8em;
 	letter-spacing: 0px;
@@ -274,7 +274,7 @@ section {
 /* Jumbotron style */
 .actis-jumbotron {
 	width: 100%;
-	background-image: url('/assets/images/jumbo-bg.png');
+	background-image: url('../assets/images/jumbo-bg.png');
 	background-size: cover;
 	background-repeat: no-repeat;
     background-position: center center;
@@ -300,10 +300,10 @@ section {
 
 /* Footer style */
 .main-footer { background-color: #2e3137; }
-.footer-copyright { 
-	float: left; 
-	padding: 35px 12px; 
-	color: #fff; 
+.footer-copyright {
+	float: left;
+	padding: 35px 12px;
+	color: #fff;
 	font-weight: 300;
 }
 .footer-copyright p { margin-bottom: 0; font-weight: 300; }
@@ -330,7 +330,7 @@ footer .year-stamp { color: #fff; }
 
 #index {
 	padding: 30px;
-	background-image: url('/assets/images/cover.jpg');
+	background-image: url('../assets/images/cover.jpg');
   	background-repeat: no-repeat, no-repeat;
   	background-size:cover;
   	height: auto;
@@ -388,5 +388,4 @@ footer .year-stamp { color: #fff; }
     display: block;
     font-size: 14px;
 
->>>>>>> a4565952ffe12bd11fda5ae8ab8d5b8cc4e2584e
 }

@@ -14,7 +14,7 @@ public class SpeakerRepository {
 	  private static List<Speaker> speakers = new ArrayList<>(3);
 
 	  static {
-	    speakers.add(new Speaker(1, "Edsger",  "Dijkstra", "bla bla", "www.google.com", "info", "link"));
+	    speakers.add(new Speaker(1, "Edsger",  "Dijkstra", "bla bla", "http://farm6.staticflickr.com/5302/5640547476_db549fe0f4.jpg", "info", "link"));
 	    speakers.add(new Speaker(2, "A",  "Dijkstra", "bla bla", "www.google.com", "info", "link"));
 	    speakers.add(new Speaker(3, "B",  "Dijkstra", "bla bla", "www.google.com", "info", "link"));
 	  }
