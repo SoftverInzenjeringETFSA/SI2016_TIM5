@@ -14,10 +14,10 @@ Router.map(function() {
   this.route('travel-accomodation');
   this.route('login');
   this.route('register');
+  this.route('speakers', function() {
+this.route('show', { path: '/:id' });  });
 
-  this.route('speaker', function() {
-    this.route('show', { path: '/show/:id' });
-  });
+
 });
 
 export default Router;

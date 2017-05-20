@@ -1,7 +1,8 @@
 ba\actis\controllers\ControllerExceptionHandler.class
-ba\actis\beans\Speaker.class
+ba\actis\repositories\SpeakerRepository.class
 ba\actis\exceptions\EntityNotFoundException.class
-ba\actis\assembler\SpeakerResourceAssembler.class
-ba\actis\store\SpeakerRepository.class
+ba\actis\controllers\BaseRestController.class
+ba\actis\models\Speaker.class
 ba\actis\controllers\SpeakerController.class
+ba\actis\SimpleCORSFilter.class
 ba\actis\StartApplication.class

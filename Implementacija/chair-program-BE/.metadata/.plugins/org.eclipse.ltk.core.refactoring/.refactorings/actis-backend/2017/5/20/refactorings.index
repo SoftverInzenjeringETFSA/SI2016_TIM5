@@ -6,3 +6,12 @@
 1495127331455	Rename package 'repositories'
 1495131847678	Rename package 'ba.actis.repositories'
 1495142175817	Rename package 'ba.actis.models'
+1495288783788	Move compilation unit
+1495288867984	Delete element
+1495288873963	Delete element
+1495288886165	Rename package 'ba.actis.store'
+1495288917617	Rename package 'repositories'
+1495288976463	Rename package 'ba.actis.beans'
+1495289011271	Delete element
+1495289044546	Delete element
+1495289096850	Rename resource 'profile.postgres'

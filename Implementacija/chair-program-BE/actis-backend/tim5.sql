@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2017 at 03:09 PM
+-- Generation Time: May 20, 2017 at 04:37 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -74,7 +74,9 @@ CREATE TABLE `speaker` (
 --
 
 INSERT INTO `speaker` (`id`, `cv`, `info`, `link`, `first_name`, `image_link`, `last_name`) VALUES
-(1, '', 'Napomena: ', 'https://www.youtube.com/watch?v=XgtopghkBZc', 'Petar', 'http://cdn.zmescience.com/wp-content/uploads/2016/12/giraffe-912182_960_720.jpg', 'Petrovic');
+(1, '', 'Napomena: ', 'https://www.youtube.com/watch?v=XgtopghkBZc', 'Petar', 'http://cdn.zmescience.com/wp-content/uploads/2016/12/giraffe-912182_960_720.jpg', 'Petrovic'),
+(2, 'moj cv', 'moje info', 'www.google.ba', 'Lejla', 'http://www.clipartbest.com/cliparts/yik/bbr/yikbbrkiE.png', 'Kesko'),
+(3, 'cv2', 'info', 'www.google.ba', 'Lejlaaaa', 'http://www.clipartbest.com/cliparts/yik/bbr/yikbbrkiE.png', 'Keskoooo');
 
 -- --------------------------------------------------------
 
@@ -146,7 +148,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `speaker`
 --
 ALTER TABLE `speaker`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --

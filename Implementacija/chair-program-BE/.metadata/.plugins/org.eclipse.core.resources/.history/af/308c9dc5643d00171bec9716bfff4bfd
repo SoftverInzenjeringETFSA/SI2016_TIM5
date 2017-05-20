@@ -1,0 +1,9 @@
+package ba.actis.store;
+
+import org.springframework.data.repository.CrudRepository;
+
+import ba.actis.beans.Speaker;
+
+public interface SpeakerRepositoryInterface extends CrudRepository<Speaker, Long>{
+
+}

@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'chair-programme',
     environment: environment,
-    rootURL: '/ui/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
