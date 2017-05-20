@@ -1,17 +1,14 @@
-
+{{log model.speakers}}
 <section>
     <div class="container">
         <div class = "row">
             <h1 class = "bg-txt">Speaker profile</h1>
-            <p class = "sm-txt" align = "justify">The following speaker will make reports at the IX annual conference for technology and
-              information security - Actis 2017.</p>
-            <br>
 
-            <h2 class = "md-txt">{{model.firstName}} {{model.lastName}}</h2>
-            <p class = "sm-txt" align = "justify"><b>Short bio:  </b> {{model.cv}}</p>
-             <p class = "sm-txt" align = "justify"><b>Abstract: </b>{{model.info}} </p>
-              <img src={{model.imageLink}} alt="">
+            <h2 class = "md-txt">{{model.speaker.firstName}} {{model.speaker.lastName}}</h2>
+            <p class = "sm-txt" align = "justify"><b>Short bio:  </b> {{model.speaker.cv}}</p>
+             <p class = "sm-txt" align = "justify"><b>Abstract: </b>{{model.speaker.info}} </p>
+              <img src={{model.speaker.imageLink}} alt="">
               <br/>
         </div>
     </div>
-</section>
+</section><br>
