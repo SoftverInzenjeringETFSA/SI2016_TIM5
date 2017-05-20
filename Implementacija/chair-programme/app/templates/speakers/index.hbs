@@ -18,12 +18,13 @@
         <div class = "row">
             <h1 class = "bg-txt">Speaker profile</h1>
 
-            <h2 class = "md-txt">{{model.firstName}} {{model.lastName}}</h2>
+{{#link-to "speakers.show" model.id}}  <h2 class = "md-txt">{{model.firstName}} {{model.lastName}}</h2> {{/link-to}}
             <p class = "sm-txt" align = "justify"><b>Short bio:  </b> {{model.cv}}</p>
              <p class = "sm-txt" align = "justify"><b>Abstract: </b>{{model.info}} </p>
               <img src={{model.imageLink}} alt="">
               <br/>
         </div>
     </div>
-</section><br>
+</section>
+<br>
 {{/each}}
