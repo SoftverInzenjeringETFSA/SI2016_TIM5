@@ -3,6 +3,10 @@ C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\mai
 C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\controllers\BaseRestController.java
 C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\models\Speaker.java
 C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\repositories\SpeakerRepository.java
+C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\repositories\RoleRepository.java
 C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\SimpleCORSFilter.java
 C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\StartApplication.java
+C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\models\User.java
 C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\controllers\ControllerExceptionHandler.java
+C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\repositories\UserRepository.java
+C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\main\java\ba\actis\models\Role.java

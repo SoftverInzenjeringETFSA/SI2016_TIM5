@@ -1,6 +1,5 @@
-import Ember from 'ember';
-
 import BaseService from './base-service';
+import Speaker from '../models/speaker';
 
 export default BaseService.extend({
     all: function() {
@@ -14,14 +13,14 @@ export default BaseService.extend({
     },
 
     getById: function(id) {
-        var speaker = Ember.Object.create({});
-        this.ajax({ url: "http://localhost:8080/speakers/one/${id}", type: "GET"}).then(function(id) {
+        var speaker = Speaker.create({});
+        this.ajax({ url: "http://localhost:8080/speakers/get?id="+id, type: "GET"}).then(function(data) {
         	console.log("data: ");
-        console.log(id);
-
+        console.log(data);
+        speaker.setProperties(data);
         	console.log("created: ");
         	console.log(speaker);
-            speaker.setProperties(id);
+
         });
 
         return speaker;

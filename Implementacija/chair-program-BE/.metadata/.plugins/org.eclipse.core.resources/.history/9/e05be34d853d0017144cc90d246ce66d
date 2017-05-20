@@ -1,0 +1,8 @@
+package ba.actis.controllers;
+
+import ba.actis.models.Role;
+import ba.actis.repositories.RoleRepository;
+
+public class RoleController extends BaseRestController<Role, RoleRepository>{
+
+}

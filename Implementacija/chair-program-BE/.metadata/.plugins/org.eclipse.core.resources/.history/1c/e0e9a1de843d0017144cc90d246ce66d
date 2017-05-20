@@ -1,0 +1,10 @@
+package ba.actis.controllers;
+
+import ba.actis.models.Role;
+import ba.actis.models.Speaker;
+import ba.actis.repositories.RoleRepository;
+import ba.actis.repositories.SpeakerRepository;
+
+public class RoleController extends BaseRestController<Role, RoleRepository>{
+
+}

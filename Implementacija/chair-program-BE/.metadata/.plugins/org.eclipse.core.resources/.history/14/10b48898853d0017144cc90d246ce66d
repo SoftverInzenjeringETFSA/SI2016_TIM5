@@ -1,0 +1,8 @@
+package ba.actis.controllers;
+
+import ba.actis.models.User;
+import ba.actis.repositories.UserRepository;
+
+public class UserController extends BaseRestController<User, UserRepository>{
+
+}
