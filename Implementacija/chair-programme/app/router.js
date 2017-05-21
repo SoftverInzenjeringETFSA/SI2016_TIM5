@@ -25,6 +25,11 @@ this.route('show', { path: '/:id' });  });
   this.route('passwordchange');
   this.route('worksubmit');
   this.route('submit-application');
+
+  this.route('user', function() {
+    this.route('show');
+    this.route('info');
+  });
 });
 
 export default Router;
