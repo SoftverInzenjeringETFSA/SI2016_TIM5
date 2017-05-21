@@ -1,5 +1,0 @@
-spring.jpa.hibernate.ddl-auto=none
-jdbc.url=jdbc:mysql://localhost:3306/tim5
-jdbc.username=EtfSI2016
-jdbc.password=2016SIEtf
-jdbc.driver-class-name=com.mysql.jdbc.Driver
