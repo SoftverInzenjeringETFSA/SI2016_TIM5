@@ -14,9 +14,9 @@ Router.map(function() {
   this.route('travel-accomodation');
   this.route('login');
   this.route('register');
-  this.route('speakers', function() {
-this.route('show', { path: '/:id' });  });
 
+  this.route('speakers', function() {
+  this.route('show', { path: '/:id' });  });
 
   this.route('add-reviewer');
   this.route('add-speaker');
@@ -29,8 +29,7 @@ this.route('show', { path: '/:id' });  });
   this.route('user', function() {
     this.route('show', { path: '/:id' });  });
   this.route('documents', function() {
-    this.route('show');
-  });
+    this.route('show'); });
 });
 
 export default Router;

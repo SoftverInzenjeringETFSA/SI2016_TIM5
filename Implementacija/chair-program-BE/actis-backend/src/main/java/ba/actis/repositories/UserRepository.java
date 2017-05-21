@@ -7,6 +7,6 @@ import ba.actis.models.User;
 
 
 public interface UserRepository extends CrudRepository<User, Long> {
-	@Query("select o from User o where id=?")
-	public User findById( Long id);
+	@Query("select u from User u where id=? and roleId=2")
+	public User findKorisnikById(Long id);
 }
