@@ -28,8 +28,6 @@ this.route('show', { path: '/:id' });  });
 
   this.route('user', function() {
     this.route('show', { path: '/:id' });  });
-    this.route('info');
-  });
 });
 
 export default Router;
