@@ -27,7 +27,7 @@ this.route('show', { path: '/:id' });  });
   this.route('submit-application');
 
   this.route('user', function() {
-    this.route('show');
+    this.route('show', { path: '/:id' });  });
     this.route('info');
   });
 });
