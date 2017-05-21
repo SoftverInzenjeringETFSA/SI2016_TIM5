@@ -1,9 +1,11 @@
-{{log model.speakers}}
+{{log model.documents}}
 
 <section>
     <div class="container">
         <div class = "row">
             <h1 class = "bg-txt">All documents</h1>
+            <br>
+            <br/>
       </div>
   </div>
 </section>
@@ -14,8 +16,8 @@
         <div class = "row">
             <h1 class = "bg-txt">Document overview</h1>
 
-{{#link-to "documents.show" model.id}}
-            <p class = "sm-txt" align = "justify"><b>See document:  </b> {{model.documentLink}}</p>
+{{#link-to "documents.show" model.id}}<p class = "sm-txt" align = "justify"><b>See document:  </b> {{model.documentLink}}</p> {{/link-to}}
+            
               <br/>
         </div>
     </div>
