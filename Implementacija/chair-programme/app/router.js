@@ -24,6 +24,7 @@ this.route('show', { path: '/:id' });  });
   this.route('docrecenzent');
   this.route('passwordchange');
   this.route('worksubmit');
+  this.route('submit-application');
 });
 
 export default Router;
