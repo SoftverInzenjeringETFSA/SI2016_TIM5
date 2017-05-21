@@ -26,7 +26,7 @@ Router.map(function() {
   this.route('worksubmit');
   this.route('submit-application');
 
-  this.route('user', function() {
+  this.route('users', function() {
     this.route('show', { path: '/:id' });  });
   this.route('documents', function() {
     this.route('show'); });
