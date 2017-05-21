@@ -1,5 +1,5 @@
 import BaseService from './base-service';
-import Speaker from '../models/role';
+import Role from '../models/role';
 
 export default BaseService.extend({
     all: function() {

@@ -8,8 +8,8 @@
   <img class="img-responsive center-block" src="assets/images/docLogo.png">
 </div>
 <div class="col-md-9">
-<a class="md-txt">View all users</a> <br><br>
-<a class="md-txt">Documents view</a>
+{{#link-to 'user/info'}}<a class="md-txt">View all users</a> <br><br>{{/link-to}}
+{{#link-to 'documents'}}<a class="md-txt">Documents view</a>{{/link-to}}
 </div>
 </div>
 <br>
@@ -19,8 +19,8 @@
 </div>
 <div class="col-md-9">
 <a class="md-txt">Reviewers review</a> <br><br>
-<a class="md-txt" href="addReviewer">New reviewer</a> <br><br>
-<a class="md-txt" href="addSpeaker">New speaker</a> <br><br>
+{{#link-to 'add-reviewer'}} <a class="md-txt" >New reviewer</a>{{/link-to}} <br><br>
+{{#link-to 'add-speaker'}}<a class="md-txt" href="addSpeaker">New speaker</a>{{/link-to}} <br><br>
 </div>
 </div>
 <br>
