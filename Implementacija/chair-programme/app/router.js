@@ -18,6 +18,12 @@ Router.map(function() {
 this.route('show', { path: '/:id' });  });
 
 
+  this.route('add-reviewer');
+  this.route('add-speaker');
+  this.route('adminpage');
+  this.route('docrecenzent');
+  this.route('passwordchange');
+  this.route('worksubmit');
 });
 
 export default Router;

@@ -1,3 +1,43 @@
-{{ main-navbar }}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-{{outlet}}
+
+<div class="container">
+<div class="row">
+  <h1 class="bg-txt col-md-12">Assign document to reviewer</h1>
+  <div class="col-md-6">
+<div class="md-txt">Document</div>
+</div>
+<div class="col-md-6">
+<div class="md-txt">Reviewer</div>
+</div>
+<br><br>
+<div class="col-md-6">
+  <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Document
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+</div>
+<div class="col-md-6">
+  <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Document
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Malina</a></li>
+        <li><a href="#">Hahu</a></li>
+        <li><a href="#">jahu</a></li>
+      </ul>
+    </div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12"><button type="submit" class="btn btn-primary">Submit</button></div>
+</div>
+</div>
+{{ sponsors-section }}
+{{ main-footer }}
