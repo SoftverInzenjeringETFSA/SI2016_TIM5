@@ -1,0 +1,26 @@
+{{log model.reviewers}}
+{{log model.role}}
+
+<section>
+  <div class="container">
+    <div class = "row">
+      <h1 class = "bg-txt">Reviewers</h1>
+    </div>
+  </div>
+</section>
+{{#each model.reviewers as |model|}}
+
+<section>
+  <div class="container">
+    <div class = "row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-10">
+      {{#link-to "users.show" model.id}}  <h2 class = "md-txt">   -{{model.firstName}} {{model.lastName}}</h2> {{/link-to}}
+      <p class = "sm-txt" align = "justify"><b>Email:  </b> {{model.email}}</p>
+    </div>
+
+    </div>
+  </div>
+</section>
+{{/each}}

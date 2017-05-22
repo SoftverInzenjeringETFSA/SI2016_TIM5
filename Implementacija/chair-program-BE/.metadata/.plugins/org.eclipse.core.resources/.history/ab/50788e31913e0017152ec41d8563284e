@@ -1,7 +1,5 @@
 package ba.actis.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,8 +28,8 @@ public class UserController extends BaseRestController<User, UserRepository>{
 	}
 	
 	@CrossOrigin
-	@GetMapping(path="/reviewers")
-	public @ResponseBody List<User> getReviewers() {
+	@GetMapping(path="/reviewersAll")
+	public @ResponseBody User getReviewers() {
 		return userRepository.findReviewers();
 	}
 }

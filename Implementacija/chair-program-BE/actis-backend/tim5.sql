@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2017 at 11:46 PM
+-- Generation Time: May 22, 2017 at 01:48 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -109,7 +109,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `role_id`, `is_verified`) VALUES
 (1, 'Lela', 'Kesko', 'lela.kesko@gmail.com', 'nemasifre', 1, b'1'),
 (2, 'Nejla', 'Klisura', 'nejla.klisura@gmail.com', 'nemasifre1', 3, b'1'),
-(3, 'Imenko', 'Prezimenko', 'imenko.prezimenko@gmail.com', 'nemasifre3', 2, b'1');
+(3, 'Imenko', 'Prezimenko', 'imenko.prezimenko@gmail.com', 'nemasifre3', 2, b'1'),
+(4, 'Simba', 'Limba', 'simba.limba@hotmail.com', 'simbalimba', 3, b'1');
 
 --
 -- Indexes for dumped tables
@@ -170,12 +171,14 @@ ALTER TABLE `speaker`
 -- Constraints for table `document`
 --
 ALTER TABLE `document`
+  ADD CONSTRAINT `FKjhdxdv9sijhujiynqbb5jc010` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   ADD CONSTRAINT `fk_Document_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `user`
 --
 ALTER TABLE `user`
+  ADD CONSTRAINT `FKn82ha3ccdebhokx3a8fgdqeyy` FOREIGN KEY (`role_id`) REFERENCES `role` (`ID`),
   ADD CONSTRAINT `fk_User_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

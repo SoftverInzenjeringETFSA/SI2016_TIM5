@@ -30,7 +30,7 @@ public class UserController extends BaseRestController<User, UserRepository>{
 	}
 	
 	@CrossOrigin
-	@GetMapping(path="/reviewers")
+	@GetMapping(path="/reviewersAll")
 	public @ResponseBody List<User> getReviewers() {
 		return userRepository.findReviewers();
 	}

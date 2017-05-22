@@ -3,7 +3,7 @@ import User from '../models/user';
 
 export default BaseService.extend({
     all: function() {
-        var users = []; // ovdje prazan objekat
+        var users = [];
         this.ajax({ url: "http://localhost:8080/users/all", type: "GET" }).then(function(data) {
             data.forEach(function(user) {
                 users.addObject(user);
@@ -26,13 +26,14 @@ export default BaseService.extend({
     },
 
     getReviewers: function() {
-        var users = []; // ovdje prazan objekat
-        this.ajax({ url: "http://localhost:8080/users/reviewersAll", type: "GET" }).then(function(data) {
+        var reviewers = [];
+        this.ajax({ url: "http://localhost:8080/users/reviewers", type: "GET" }).then(function(data) {
             data.forEach(function(user) {
-                users.addObject(user);
+                reviewers.addObject(user);
             });
         });
-        return users;
+        return reviewers;
     }
+
 
 });
