@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2017 at 01:48 AM
+-- Generation Time: May 22, 2017 at 05:06 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tim5`
+-- Database: `tim55`
 --
 
 -- --------------------------------------------------------
@@ -27,19 +27,21 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `document` (
-  `ID` int(11) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `document_link` varchar(255) COLLATE utf8_slovenian_ci DEFAULT NULL,
-  `is_approved` bit(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+  `id` int(11) NOT NULL,
+  `document_link` varchar(500) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `reviewer_id` int(11) DEFAULT NULL,
+  `review` int(11) DEFAULT NULL,
+  `isApproved` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `document`
 --
 
-INSERT INTO `document` (`ID`, `user_id`, `document_link`, `is_approved`) VALUES
-(1, 1, 'https://docs.google.com/document/d/1Re5X0-H_Mu_sEWvXvKYLtwnT1Lgqaz-p2s0zXCu8T4Q/edit', b'1'),
-(2, 1, 'https://docs.google.com/document/d/1iZf5sk7MumqJbQJJgChgaJMb5BGzHrCKdLofVxFqvDE/edit', b'1');
+INSERT INTO `document` (`id`, `document_link`, `user_id`, `reviewer_id`, `review`, `isApproved`) VALUES
+(1, 'https://docs.google.com/document/d/1Re5X0-H_Mu_sEWvXvKYLtwnT1Lgqaz-p2s0zXCu8T4Q/edit', 2, NULL, NULL, 0),
+(2, 'https://docs.google.com/document/d/1iZf5sk7MumqJbQJJgChgaJMb5BGzHrCKdLofVxFqvDE/edit', 2, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -48,18 +50,18 @@ INSERT INTO `document` (`ID`, `user_id`, `document_link`, `is_approved`) VALUES
 --
 
 CREATE TABLE `role` (
-  `ID` int(11) NOT NULL,
-  `role_name` varchar(20) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+  `id` int(11) NOT NULL,
+  `role_name` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `role`
 --
 
-INSERT INTO `role` (`ID`, `role_name`) VALUES
-(1, 'Administrator'),
-(2, 'Korisnik'),
-(3, 'Recenzent');
+INSERT INTO `role` (`id`, `role_name`) VALUES
+(1, 'Administator'),
+(2, 'Registered user'),
+(3, 'Reviewer');
 
 -- --------------------------------------------------------
 
@@ -69,22 +71,21 @@ INSERT INTO `role` (`ID`, `role_name`) VALUES
 
 CREATE TABLE `speaker` (
   `id` int(11) NOT NULL,
-  `cv` varchar(255) COLLATE utf8_slovenian_ci DEFAULT NULL,
-  `info` varchar(1000) COLLATE utf8_slovenian_ci NOT NULL,
-  `link` varchar(255) COLLATE utf8_slovenian_ci DEFAULT NULL,
-  `first_name` varchar(255) COLLATE utf8_slovenian_ci DEFAULT NULL,
-  `image_link` varchar(255) COLLATE utf8_slovenian_ci DEFAULT NULL,
-  `last_name` varchar(255) COLLATE utf8_slovenian_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `cv` varchar(255) DEFAULT NULL,
+  `image_link` varchar(255) NOT NULL,
+  `info` varchar(1000) NOT NULL,
+  `link` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `speaker`
 --
 
-INSERT INTO `speaker` (`id`, `cv`, `info`, `link`, `first_name`, `image_link`, `last_name`) VALUES
-(1, '', 'Napomena: ', 'https://www.youtube.com/watch?v=XgtopghkBZc', 'Petar', 'http://cdn.zmescience.com/wp-content/uploads/2016/12/giraffe-912182_960_720.jpg', 'Petrovic'),
-(2, 'moj cv', 'moje info', 'www.google.ba', 'Lejla', 'http://www.clipartbest.com/cliparts/yik/bbr/yikbbrkiE.png', 'Kesko'),
-(3, 'cv2', 'info', 'www.google.ba', 'Lejlaaaa', 'http://www.clipartbest.com/cliparts/yik/bbr/yikbbrkiE.png', 'Keskoooo');
+INSERT INTO `speaker` (`id`, `first_name`, `last_name`, `cv`, `image_link`, `info`, `link`) VALUES
+(1, 'Petar', 'Petrovic', NULL, 'http://cdn.zmescience.com/wp-content/uploads/2016/12/giraffe-912182_960_720.jpg', '\r\nNapomena:  \r\n ', 'https://www.youtube.com/watch?v=XgtopghkBZc '),
+(2, 'Lela', 'Kesko', NULL, 'http://www.bioteams.com/images/the_networked_e.jpg', 'moje info', NULL);
 
 -- --------------------------------------------------------
 
@@ -94,23 +95,27 @@ INSERT INTO `speaker` (`id`, `cv`, `info`, `link`, `first_name`, `image_link`, `
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `first_name` varchar(50) COLLATE utf8_slovenian_ci DEFAULT NULL,
-  `last_name` varchar(50) COLLATE utf8_slovenian_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `password` varchar(255) COLLATE utf8_slovenian_ci DEFAULT NULL,
-  `role_id` int(11) DEFAULT NULL,
-  `is_verified` bit(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+  `first_name` varchar(25) NOT NULL,
+  `last_name` varchar(25) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  `state` varchar(50) DEFAULT NULL,
+  `role_id` int(11) NOT NULL,
+  `function` varchar(50) DEFAULT NULL,
+  `note` varchar(100) DEFAULT NULL,
+  `is_verified` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `role_id`, `is_verified`) VALUES
-(1, 'Lela', 'Kesko', 'lela.kesko@gmail.com', 'nemasifre', 1, b'1'),
-(2, 'Nejla', 'Klisura', 'nejla.klisura@gmail.com', 'nemasifre1', 3, b'1'),
-(3, 'Imenko', 'Prezimenko', 'imenko.prezimenko@gmail.com', 'nemasifre3', 2, b'1'),
-(4, 'Simba', 'Limba', 'simba.limba@hotmail.com', 'simbalimba', 3, b'1');
+INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `city`, `state`, `role_id`, `function`, `note`, `is_verified`) VALUES
+(1, 'Lejla', 'Kesko', 'lela.kesko@gmail.com', 'lelakesko1', 'Hadzici', 'Sarajevo', 1, NULL, 'pitajkonobara', 1),
+(2, 'Imenko', 'Prezimenko', 'imenko.prezimenko@gmail.com', 'nemasifre1', NULL, NULL, 2, NULL, NULL, 1),
+(3, 'Simba', 'Limba', 'simba.limba@gmail.com', 'simbalimba1', NULL, NULL, 3, NULL, NULL, 1),
+(4, 'Adna', 'Karkelja', 'adna.karkelja@gmail.com', 'karkelja1', NULL, NULL, 3, NULL, NULL, 1);
 
 --
 -- Indexes for dumped tables
@@ -120,15 +125,15 @@ INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `role_
 -- Indexes for table `document`
 --
 ALTER TABLE `document`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `fk_Document_1_idx` (`user_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `reviewer_id` (`reviewer_id`) USING BTREE,
+  ADD KEY `user_id` (`user_id`) USING BTREE;
 
 --
 -- Indexes for table `role`
 --
 ALTER TABLE `role`
-  ADD PRIMARY KEY (`ID`),
-  ADD UNIQUE KEY `index2` (`role_name`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `speaker`
@@ -141,8 +146,7 @@ ALTER TABLE `speaker`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `index3` (`email`),
-  ADD KEY `fk_User_1_idx` (`role_id`);
+  ADD KEY `fk_role_user` (`role_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -152,17 +156,22 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `speaker`
 --
 ALTER TABLE `speaker`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Constraints for dumped tables
 --
@@ -171,15 +180,14 @@ ALTER TABLE `speaker`
 -- Constraints for table `document`
 --
 ALTER TABLE `document`
-  ADD CONSTRAINT `FKjhdxdv9sijhujiynqbb5jc010` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `fk_Document_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `document_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `document_ibfk_2` FOREIGN KEY (`reviewer_id`) REFERENCES `user` (`id`);
 
 --
 -- Constraints for table `user`
 --
 ALTER TABLE `user`
-  ADD CONSTRAINT `FKn82ha3ccdebhokx3a8fgdqeyy` FOREIGN KEY (`role_id`) REFERENCES `role` (`ID`),
-  ADD CONSTRAINT `fk_User_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -35,7 +35,7 @@ public abstract class BaseRestController<M, R extends CrudRepository<M, Long>> {
 		return repository.findOne(id);
 	}*/
 
-/*	@RequestMapping("/create")
+	@RequestMapping("/create")
 	public M create(@RequestBody M model) {
 		return repository.save(model);
 	}
@@ -43,5 +43,5 @@ public abstract class BaseRestController<M, R extends CrudRepository<M, Long>> {
 	@RequestMapping("/delete/{id}")
 	public void delete(@PathVariable long id) {
 		repository.delete(id);
-	} */
+	} 
 }

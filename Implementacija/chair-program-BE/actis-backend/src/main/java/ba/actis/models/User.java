@@ -21,7 +21,12 @@ public class User {
 	@OneToOne(targetEntity = Role.class)
 	@JoinColumn(name = "role_id")
 	private Role roleId;
+	
 	private boolean isVerified;
+	private String city;
+	private String state;
+	private String function;
+	private String note;
 
 	
 	public String getFirstName() {
@@ -80,6 +85,38 @@ public class User {
 
 	public void setId(Long ID) {
 		this.id = ID;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getFunction() {
+		return function;
+	}
+
+	public void setFunction(String function) {
+		this.function = function;
+	}
+
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
 	}
 
 

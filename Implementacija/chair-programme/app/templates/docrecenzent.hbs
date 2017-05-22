@@ -18,9 +18,9 @@
       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Document
       <span class="caret"></span></button>
       <ul class="dropdown-menu">
-        <li><a href="#">HTML</a></li>
-        <li><a href="#">CSS</a></li>
-        <li><a href="#">JavaScript</a></li>
+        {{#each model.dokuments as |model|}}
+        <li><a href="#"> {{model.userId.firstName}} {{model.userId.lastName}}: {{model.documentLink}}  </a></li>
+          {{/each}}
       </ul>
     </div>
 </div>
@@ -29,9 +29,9 @@
       <button class="btn btn-primary dropdown-toggle" type="button"  data-toggle="dropdown">Reviewer
       <span class="caret"></span></button>
       <ul class="dropdown-menu">
-        <li><a href="#">Malina</a></li>
-        <li><a href="#">Hahu</a></li>
-        <li><a href="#">jahu</a></li>
+        {{#each model.reviewers as |model|}}
+        <li><a href="#"> {{model.firstName}} {{model.lastName}} </a></li>
+          {{/each}}
       </ul>
     </div>
 </div>

@@ -1,0 +1,72 @@
+{{ actis-jumbotron }}
+<div class="container">
+  <div class="row">
+
+    <h1 class="bg-txt">Register</h1>
+
+    <form>
+
+      <div class="form-group {{if errors.firstName 'has-error'}}">
+        <label for="inputFirstname">Ime</label>
+        {{input  class="form-control" id="inputFirstname" value=user.firstName placeholder="Ime"}}
+        {{#each errors.firstName as |error|}}
+        <span class="help-block">{{error.message}}</span>
+        {{/each}}
+      </div>
+
+      <div class="form-group {{if errors.lastName 'has-error'}}">
+        <label for="inputLastname">Prezime</label>
+        {{input class="form-control" id="inputLastname" value=user.lastName placeholder="Prezime"}}
+        {{#each errors.lastName as |error|}}
+        <span class="help-block">{{error.message}}</span>
+        {{/each}}
+      </div>
+
+      <div class="form-group {{if errors.email 'has-error'}}">
+        <label for="inputEmail">Email</label>
+        {{input type="email" class="form-control" id="inputEmail" value=user.email placeholder="Email"}}
+        {{#each errors.email as |error|}}
+        <span class="help-block">{{error.message}}</span>
+        {{/each}}
+      </div>
+
+      <div class="form-group {{if errors.password 'has-error'}}">
+        <label for="inputPassword">Password</label>
+        {{input type="password" class="form-control" id="inputPassword" value=user.password placeholder="Password"}}
+        {{#each errors.password as |error|}}
+        <span class="help-block">{{error.message}}</span>
+        {{/each}}
+      </div>
+
+      <div class="form-group">
+        <label for="inputFunction">Funkcija na fakultetu</label>
+        {{input class="form-control" id="inputFunction" value=user.function placeholder="Funkcija na fakultetu"}}
+      </div>
+
+      <div class="form-group">
+        <label for="inputUniversity">Univerzitet</label>
+        {{input class="form-control" id="inputUniversity" placeholder="Univerzitet"}}
+      </div>
+
+      <div class="form-group">
+        <label for="inputFaculty">Fakultet</label>
+        {{input  class="form-control" id="inputFaculty" value=user.note placeholder="Fakultet"}}
+      </div>
+
+      <div class="form-group">
+        <label for="inputCountry">Država</label>
+        {{input class="form-control" id="inputCountry" value=user.state placeholder="Država"}}
+      </div>
+
+      <div class="form-group">
+        <label for="inputCity">Grad</label>
+        {{input class="form-control" id="inputCity"  value=user.city placeholder="Grad"}}
+      </div>
+
+      <button type="submit" class="btn btn-primary" {{action "submit"}}> Submit </button>
+    </form>
+    <br><br>
+  </div>
+</div>
+{{ sponsors-section }}
+{{ main-footer }}

@@ -14,4 +14,5 @@ public interface UserRepository extends CrudRepository<User, Long> {
 	
 	@Query("select u from User u where roleId=3")
 	public List<User> findReviewers();
+	
 }

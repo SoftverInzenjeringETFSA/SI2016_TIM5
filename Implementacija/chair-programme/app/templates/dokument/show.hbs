@@ -6,6 +6,8 @@
     <div class = "row">
    <h2 class = "md-txt">  {{model.dokument.id}}. <a href= {{model.dokument.documentLink}}>Dokument: {{model.dokument.documentLink}}</a></h2>
          <p class = "sm-txt" align = "justify"><b>User:  </b> {{model.dokument.userId.firstName}} {{model.dokument.userId.lastName}}</p>
+         <p class = "md-txt" align = "justify"><b>Reviewer:  </b> {{model.dokument.roleId.firstName}} {{model.dokument.roleId.lastName}}</p>
+         <p class = "md-txt" align = "justify"><b>Review:  </b> {{model.dokument.review}} </p>
 
     </div>
   </div>

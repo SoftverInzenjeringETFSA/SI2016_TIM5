@@ -18,7 +18,14 @@ public class Document {
 	@OneToOne(targetEntity= User.class)
 	@JoinColumn(name="user_id")
 	private User userId;
+	
 	private String documentLink;
+	private Integer review;
+	
+	@OneToOne(targetEntity= User.class)
+	@JoinColumn(name="reviewer_id")
+	private User reviewerId;
+	
 	private Boolean isApproved;
 	
 	Document (){}
@@ -37,6 +44,14 @@ public class Document {
 	public void setUserId(User userId) {
 		this.userId = userId;
 	}
+
+	public User getReviewerId() {
+		return reviewerId;
+	}
+	
+	public void setReviewerId(User reviewerId) {
+		this.reviewerId = reviewerId;
+	}
 	
 	public String getDocumentLink() {
 		return documentLink;
@@ -52,5 +67,13 @@ public class Document {
 	
 	public void setIsApproved(Boolean isApproved) {
 		this.isApproved = isApproved;
+	}
+	public Integer getReview() {
+		return review;
+	}
+	public void setReview(Integer review) {
+		this.review = review;
 	} 
+	
+	
 }

@@ -33,7 +33,11 @@ export default BaseService.extend({
             });
         });
         return reviewers;
-    }
+    },
+
+    register: function(data) {
+      return this.ajax({ url: "http://localhost:8080/users/create", type: "POST", data: JSON.stringify(data)})
+  }
 
 
 });
