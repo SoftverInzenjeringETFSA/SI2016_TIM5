@@ -1,16 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  roleService: Ember.inject.service(),
   userService: Ember.inject.service(),
-
-
-
 	model: function(){
-		return{firstName:'',lastName:'',email:'',password:'','2':'',1:''};
+    role: this.get('roleService').getById(2);
+		return{firstName:'',lastName:'',email:'',password:'',roleId:this.get('roleService').getById(2),isVerified:'',state:'',city:'',note:'',function:''};
 	},
 
 	setupController:function(controller,model){
-		controller.set('User',model);
+		controller.set('user',model);
 	},
 
 	actions:{

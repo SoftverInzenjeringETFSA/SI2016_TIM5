@@ -5,10 +5,8 @@ export default Ember.Component.extend({
 userService: Ember.inject.service(),
 	errors:DS.Errors.create(),
 
-
 	validate: function(){
 		this.set('errors',DS.Errors.create());
-
 
 		if(this.get('user.firstName')==='' || this.get('user.firstName')===undefined){
 			this.get('errors').add('firstName','Input firstName!!');

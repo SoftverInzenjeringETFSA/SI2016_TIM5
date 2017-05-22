@@ -74,7 +74,7 @@ public class User {
 	}
 
 	public void setVerified(boolean isVerified) {
-		this.isVerified = true;
+		this.isVerified = isVerified;
 	}
 	
 	public User () {}
