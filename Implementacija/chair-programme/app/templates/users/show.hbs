@@ -1,4 +1,5 @@
 {{log model.user}}
+{{log model.dokuments}}
 
 <section>
   <div class="container">
@@ -8,6 +9,20 @@
       <h2 class = "md-txt">{{model.user.firstName}} </h2>
       <p class = "sm-txt" align = "justify"><b>Last Name:  </b> {{model.user.lastName}}</p>
       <p class = "sm-txt" align = "justify"><b>Email: </b>{{model.user.email}} </p>
+       <p class = "sm-txt" align = "justify"><b>Role: </b>{{model.user.roleId.roleName}} </p>
+
+       {{#each model.dokuments as |doc|}}
+
+       <section>
+         <div class="container">
+           <div class = "row">
+
+              <h2 class = "md-txt">  <a href= {{doc.mode.user.documentLink}}>Dokument:  {{doc.model.user.documentLink}}</a></h2>
+
+           </div>
+         </div>
+       </section>
+       {{/each}}
     </div>
   </div>
 </section>
