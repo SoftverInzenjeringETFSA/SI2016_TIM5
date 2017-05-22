@@ -26,4 +26,10 @@ public class UserController extends BaseRestController<User, UserRepository>{
 	public @ResponseBody User getById(@RequestParam("id") Long id) {
 		return userRepository.findKorisnikById(id);
 	}
+	
+	@CrossOrigin
+	@GetMapping(path="/reviewersAll")
+	public @ResponseBody User getReviewers() {
+		return userRepository.findReviewers();
+	}
 }

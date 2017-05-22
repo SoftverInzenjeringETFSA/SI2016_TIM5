@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2017 at 07:01 PM
+-- Generation Time: May 21, 2017 at 11:46 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -32,6 +32,14 @@ CREATE TABLE `document` (
   `document_link` varchar(255) COLLATE utf8_slovenian_ci DEFAULT NULL,
   `is_approved` bit(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+
+--
+-- Dumping data for table `document`
+--
+
+INSERT INTO `document` (`ID`, `user_id`, `document_link`, `is_approved`) VALUES
+(1, 1, 'https://docs.google.com/document/d/1Re5X0-H_Mu_sEWvXvKYLtwnT1Lgqaz-p2s0zXCu8T4Q/edit', b'1'),
+(2, 1, 'https://docs.google.com/document/d/1iZf5sk7MumqJbQJJgChgaJMb5BGzHrCKdLofVxFqvDE/edit', b'1');
 
 -- --------------------------------------------------------
 
@@ -139,6 +147,11 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `document`
+--
+ALTER TABLE `document`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `role`
 --

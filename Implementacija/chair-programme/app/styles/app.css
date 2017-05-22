@@ -295,8 +295,9 @@ section {
 .sponsors-ul {
 	margin: auto;
 	list-style-type: none;
+
 }
-.sponsors-ul li { float: left; padding: 40px 40px; }
+.sponsors-ul li { float: left; padding: 40px 40px;  }
 
 /* Footer style */
 .main-footer { background-color: #2e3137; }

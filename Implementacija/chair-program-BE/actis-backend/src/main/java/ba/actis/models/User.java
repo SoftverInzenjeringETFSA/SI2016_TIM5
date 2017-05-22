@@ -19,7 +19,7 @@ public class User {
 	private String password;
 
 	@OneToOne(targetEntity = Role.class)
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "role_id")
 	private Role roleId;
 	private boolean isVerified;
 

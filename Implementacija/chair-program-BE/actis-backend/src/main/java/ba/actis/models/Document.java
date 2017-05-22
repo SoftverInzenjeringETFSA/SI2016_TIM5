@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -13,19 +15,29 @@ public class Document {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@OneToOne(targetEntity=User.class)
-	@JoinColumn(name="id")
-	private Long userId;
+	@OneToOne(targetEntity= User.class)
+	@JoinColumn(name="user_id")
+	private User userId;
 	private String documentLink;
 	private Boolean isApproved;
 	
-	public Long getUserId() {
+	Document (){}
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long ID) {
+		this.id = ID;
+	}
+
+	public User getUserId() {
 		return userId;
 	}
 	
-	public void setUserId(Long userId) {
+	public void setUserId(User userId) {
 		this.userId = userId;
 	}
+	
 	public String getDocumentLink() {
 		return documentLink;
 	}

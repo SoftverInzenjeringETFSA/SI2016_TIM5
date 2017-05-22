@@ -8,4 +8,6 @@ export default Ember.Route.extend({
       users: this.get('userService').all()
     });
   }
+
+
 });

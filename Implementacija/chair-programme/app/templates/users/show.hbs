@@ -1,13 +1,14 @@
 {{log model.user}}
-<section>
-    <div class="container">
-        <div class = "row">
-            <h1 class = "bg-txt">User profile</h1>
 
-            <h2 class = "md-txt">{{model.user.firstName}} </h2>
-            <p class = "sm-txt" align = "justify"><b>Last Name:  </b> {{model.user.lastName}}</p>
-             <p class = "sm-txt" align = "justify"><b>Email: </b>{{model.user.email}} </p>
-              <br/>
-        </div>
+<section>
+  <div class="container">
+    <div class = "row">
+      <h1 class = "bg-txt">User profile</h1>
+
+      <h2 class = "md-txt">{{model.user.firstName}} </h2>
+      <p class = "sm-txt" align = "justify"><b>Last Name:  </b> {{model.user.lastName}}</p>
+      <p class = "sm-txt" align = "justify"><b>Email: </b>{{model.user.email}} </p>
+      <p class = "sm-txt" align = "justify"><b>Role: </b>{{model.user.role.roleName}} </p>
     </div>
-</section><br>
+  </div>
+</section>

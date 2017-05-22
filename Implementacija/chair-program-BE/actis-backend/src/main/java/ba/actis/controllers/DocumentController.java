@@ -9,14 +9,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import ba.actis.models.Document;
+import ba.actis.models.Speaker;
 import ba.actis.repositories.DocumentRepository;
+import ba.actis.repositories.SpeakerRepository;
 
 @RestController
 @RequestMapping("/documents")
-public class DocumentController {
+public class DocumentController  extends BaseRestController<Document, DocumentRepository>{
 	@Autowired
 	private DocumentRepository documentRepository;
-
 	
 	@CrossOrigin
 	@GetMapping(path="/get")

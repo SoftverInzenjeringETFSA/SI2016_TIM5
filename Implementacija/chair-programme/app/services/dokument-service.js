@@ -1,29 +1,28 @@
 import BaseService from './base-service';
-import Document from '../models/document';
+import Dokument from '../models/dokument';
 
 export default BaseService.extend({
     all: function() {
-        var documents = []; // ovdje prazan objekat
+        var dokuments = []; // ovdje prazan objekat
         this.ajax({ url: "http://localhost:8080/documents/all", type: "GET" }).then(function(data) {
-            data.forEach(function(document) {
-                documents.addObject(document);
+            data.forEach(function(dokument) {
+                dokuments.addObject(dokument);
             });
         });
-        return speakers;
+        return dokuments;
     },
 
     getById: function(id) {
-        var document = Document.create({});
+        var dokument = Dokument.create({});
         this.ajax({ url: "http://localhost:8080/documents/get?id="+id, type: "GET"}).then(function(data) {
         	console.log("data: ");
         console.log(data);
-        document.setProperties(data);
+        dokument.setProperties(data);
         	console.log("created: ");
-        	console.log(document);
-
+        	console.log(dokument);
         });
 
-        return document;
+        return dokument;
     }
 
 });

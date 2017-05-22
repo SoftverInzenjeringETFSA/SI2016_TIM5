@@ -1,20 +1,24 @@
 {{log model.users}}
+{{log model.role}}
 
 <section>
-    <div class="container">
-        <div class = "row">
-            <h1 class = "bg-txt">Registered Users </h1>
-      </div>
+  <div class="container">
+    <div class = "row">
+      <h1 class = "bg-txt">Registered Users </h1>
+    </div>
   </div>
 </section>
 {{#each model.users as |model|}}
 
 <section>
-    <div class="container">
-        <div class = "row">
-{{#link-to "users.show" model.id}}  <h2 class = "md-txt">  {{model.id}}. {{model.firstName}} {{model.lastName}}</h2> {{/link-to}}
-            <p class = "sm-txt" align = "justify"><b>Email:  </b> {{model.email}}</p>
-        </div>
+  <div class="container">
+    <div class = "row">
+      {{#link-to "users.show" model.id}}  <h2 class = "md-txt">  {{model.id}}. {{model.firstName}} {{model.lastName}}</h2> {{/link-to}}
+      <p class = "sm-txt" align = "justify"><b>Email:  </b> {{model.email}}</p>
+      <p class = "sm-txt" align = "justify"><b>Role: </b>{{model.role.roleName}} </p>
+
+
     </div>
+  </div>
 </section>
 {{/each}}

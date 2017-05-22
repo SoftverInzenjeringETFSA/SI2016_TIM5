@@ -20,10 +20,19 @@ export default BaseService.extend({
         user.setProperties(data);
         	console.log("created: ");
         	console.log(user);
-
         });
 
         return user;
+    },
+
+    getReviewers: function() {
+        var users = []; // ovdje prazan objekat
+        this.ajax({ url: "http://localhost:8080/users/reviewersAll", type: "GET" }).then(function(data) {
+            data.forEach(function(user) {
+                users.addObject(user);
+            });
+        });
+        return users;
     }
 
 });

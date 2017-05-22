@@ -5,7 +5,8 @@ export default Ember.Route.extend({
 
   model: function() {
     return Ember.RSVP.hash({
-      speakers: this.get('userService').all()
+      users: this.get('userService').all()
     });
   }
+
 });

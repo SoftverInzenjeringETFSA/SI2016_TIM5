@@ -1,0 +1,12 @@
+{{log model.dokument}}
+{{log model.users}}
+
+<section>
+  <div class="container">
+    <div class = "row">
+   <h2 class = "md-txt">  {{model.dokument.id}}. <a href= {{model.dokument.documentLink}}>Dokument: {{model.dokument.documentLink}}</a></h2>
+         <p class = "sm-txt" align = "justify"><b>User:  </b> {{model.dokument.userId.firstName}} {{model.dokument.userId.lastName}}</p>
+
+    </div>
+  </div>
+</section>

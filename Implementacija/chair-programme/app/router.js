@@ -28,8 +28,9 @@ Router.map(function() {
 
   this.route('users', function() {
     this.route('show', { path: '/:id' });  });
-  this.route('documents', function() {
-    this.route('show'); });
+
+    this.route('dokument', function() {
+      this.route('show', { path: '/:id' });  });
 });
 
 export default Router;
