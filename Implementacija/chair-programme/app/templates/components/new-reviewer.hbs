@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <h1 class="bg-txt col-md-12">Add new reviewer</h1>
+    <div class="col-md-12">
+      <form>
+
+        <div class="form-group {{if errors.firstName 'has-error'}}">
+           <label for="inputFirstname">First name</label>
+          {{input  class="form-control" id="inputFirstname" value=user.firstName
+          placeholder="First name"}}
+          {{#each errors.firstName as |error|}}
+          <span class="help-block">{{error.message}}</span>
+          {{/each}}
+        </div>
+
+        <div class="form-group {{if errors.lastName 'has-error'}}">
+          <label for="inputLastname">Last name</label>
+          {{input  class="form-control" id="inputLastname" value=user.lastName
+          placeholder="Last name"}}
+          {{#each errors.lastName as |error|}}
+          <span class="help-block">{{error.message}}</span>
+          {{/each}}
+        </div>
+
+        <div class="form-group">
+         <label for="inputTitle">Title</label>
+          {{input  class="form-control" id="inputFunction" value=user.function
+          placeholder="Title"}}
+        </div>
+
+        <div class="form-group">
+          <label for="inputCountry">Country</label>
+          {{input  class="form-control" id="inputCountry" value=user.state
+          placeholder="Country"}}
+        </div>
+        <div class="form-group">
+          <label for="inputCity">City</label>
+          {{input  class="form-control" id="inputCity" value=user.city
+          placeholder="City"}}
+        </div>
+
+        <div class="form-group {{if errors.email 'has-error'}}">
+          <label for="inputEmail">email</label>
+          {{input type="email" class="form-control" id="inputEmail" value=user.email
+          placeholder="Email"}}
+          {{#each errors.email as |error|}}
+          <span class="help-block">{{error.message}}</span>
+          {{/each}}
+        </div>
+
+        <div class="form-group {{if errors.password 'has-error'}}">
+          <label for="inputPassword">Password</label>
+          {{input type="password" class="form-control" id="inputPassword" value=user.password
+          placeholder="Password"}}
+          {{#each errors.password as |error|}}
+          <span class="help-block">{{error.message}}</span>
+          {{/each}}
+        </div>
+
+        <div class="form-group">
+          <label for="inputRemark">Remark</label>
+          {{input class="form-control"  value=user.note  id="inputNote"
+          placeholder="Remark"}}
+        </div>
+
+     <button type="submit" class="btn btn-primary" {{action "submit"}}> Submit </button> 
+      </form>
+    </div>
+    <br><br>
+  </div>
+</div>
+{{ sponsors-section }}
+{{ main-footer }}

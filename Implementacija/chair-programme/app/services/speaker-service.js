@@ -24,6 +24,11 @@ export default BaseService.extend({
         });
 
         return speaker;
-    }
+    },
+
+        register: function(data) {
+          return this.ajax({ url: "http://localhost:8080/speakers/create", type: "POST", data: JSON.stringify(data)})
+      }
+
 
 });

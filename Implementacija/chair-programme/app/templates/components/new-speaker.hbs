@@ -1,0 +1,61 @@
+<div class="container">
+<div class="row">
+  <h1 class="bg-txt col-md-12">Add new speaker</h1>
+  <div class="col-md-12">
+
+  <form>
+
+    <div class="form-group {{if errors.firstName 'has-error'}}">
+      <label for="inputFirstname">First name</label>
+      {{input  class="form-control" value=speaker.firstName id="inputFirstname" placeholder="First name"}}
+      {{#each errors.firstName as |error|}}
+      <span class="help-block">{{error.message}}</span>
+      {{/each}}
+    </div>
+
+    <div class="form-group {{if errors.lastName 'has-error'}}">
+      <label for="inputLastname">Last name</label>
+        {{input  class="form-control"  value=speaker.lastName id="inputLastname" placeholder="Last name"}}
+        {{#each errors.lastName as |error|}}
+        <span class="help-block">{{error.message}}</span>
+        {{/each}}
+    </div>
+
+    <div class="form-group">
+      <label for="inputCV">CV</label>
+        {{textarea class="form-control" value=speaker.cv id="inputCV"
+      placeholder="CV"}}
+    </div>
+
+    <div class="form-group {{if errors.imageLink 'has-error'}}">
+      <label for="inputImageLink">Image link</label>
+        {{textarea class="form-control" value=speaker.imageLink id="inputImageLink"
+      placeholder="Image link"}}
+      {{#each errors.imageLink as |error|}}
+      <span class="help-block">{{error.message}}</span>
+      {{/each}}
+    </div>
+
+    <div class="form-group {{if errors.info 'has-error'}}">
+      <label for="inputInfo">Info</label>
+    {{textarea class="form-control" value=speaker.info id="inputInfo"
+      placeholder="Info"}}
+      {{#each errors.info as |error|}}
+      <span class="help-block">{{error.message}}</span>
+      {{/each}}
+    </div>
+
+    <div class="form-group">
+      <label for="inputLink">Link</label>
+      {{input class="form-control" value=speaker.link id="inputLink"
+      placeholder="Link"}}
+    </div>
+
+    <button type="submit" class="btn btn-primary" {{action "submit"}}> Submit </button>
+  </form>
+</div>
+<br><br>
+</div>
+</div>
+{{ sponsors-section }}
+{{ main-footer }}
