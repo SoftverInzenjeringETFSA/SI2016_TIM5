@@ -14,10 +14,12 @@
   <div class="container">
     <div class = "row">
       <div class="col-md-2">
+        <img class="img-responsive center-block" src="../assets/images/recLogo.png">
       </div>
       <div class="col-md-10">
       {{#link-to "users.show" model.id}}  <h2 class = "md-txt">   -{{model.firstName}} {{model.lastName}}</h2> {{/link-to}}
       <p class = "sm-txt" align = "justify"><b>Email:  </b> {{model.email}}</p>
+       <p class = "sm-txt" align = "justify"><b>Role: </b>{{model.roleId.roleName}} </p>
     </div>
 
     </div>

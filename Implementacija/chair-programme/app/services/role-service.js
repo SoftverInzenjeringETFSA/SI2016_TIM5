@@ -20,7 +20,6 @@ export default BaseService.extend({
         role.setProperties(data);
         	console.log("created: ");
         	console.log(role);
-
         });
 
         return role;
