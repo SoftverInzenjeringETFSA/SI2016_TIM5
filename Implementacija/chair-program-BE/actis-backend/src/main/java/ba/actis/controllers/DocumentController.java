@@ -24,4 +24,6 @@ public class DocumentController  extends BaseRestController<Document, DocumentRe
 	public @ResponseBody Document getById(@RequestParam("id") Long id) {
 		return documentRepository.findById(id);
 	}
+	
+	
 }

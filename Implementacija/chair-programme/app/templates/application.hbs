@@ -1,3 +1,17 @@
 {{ main-navbar }}
+<section class="sponsors-section-holder">
+<div class="container">
+	<div class="row">
+  
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+{{#if session.isAuthenticated}}
+  <li>Welcome {{ session.data.authenticated.korisnik.email }} </li>
+  <li {{action 'logout' on='click'}}> Log out</li>
 
+{{else}}
+    <li> {{#link-to 'login'}}Login  {{/link-to}}</li>
+{{/if}}
+  </div>  </div></div>
+
+  </section>
 {{outlet}}

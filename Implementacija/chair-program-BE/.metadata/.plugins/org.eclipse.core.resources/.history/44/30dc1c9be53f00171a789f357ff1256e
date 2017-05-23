@@ -1,0 +1,5 @@
+package ba.actis.services;
+
+public class AuthService {
+
+}

@@ -4,7 +4,7 @@
 
     <h1 class="bg-txt">Register</h1>
 
-    <form>
+    <form {{action 'register' on="submit"}}>
 
       <div class="form-group {{if errors.firstName 'has-error'}}">
         <label for="inputFirstname">Ime</label>
