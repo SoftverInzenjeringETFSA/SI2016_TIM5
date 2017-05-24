@@ -43,6 +43,26 @@ export default BaseService.extend({
             });
         });
         return dokuments;
+    },
+
+    DocsForReview: function() {
+        var dokuments = []; // ovdje prazan objekat
+        this.ajax({ url: "http://localhost:8080/documents/DocsForReview", type: "GET" }).then(function(data) {
+            data.forEach(function(dokument) {
+                dokuments.addObject(dokument);
+            });
+        });
+        return dokuments;
+    },
+
+    getReviewerDocs: function(id) {
+        var dokuments = []; // ovdje prazan objekat
+        this.ajax({ url: "http://localhost:8080/documents/getReviewerDocs?id="+id, type: "GET" }).then(function(data) {
+            data.forEach(function(dokument) {
+                dokuments.addObject(dokument);
+            });
+        });
+        return dokuments;
     }
 
 });

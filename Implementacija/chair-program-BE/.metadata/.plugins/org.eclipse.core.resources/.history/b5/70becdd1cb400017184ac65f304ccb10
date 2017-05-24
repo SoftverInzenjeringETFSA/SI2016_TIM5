@@ -20,8 +20,6 @@ public class Document {
 	private User userId;
 	
 	private String documentLink;
-	private String name;
-
 	private Integer review;
 	
 	@OneToOne(targetEntity= User.class)
@@ -75,12 +73,6 @@ public class Document {
 	}
 	public void setReview(Integer review) {
 		this.review = review;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
 	} 
 	
 	

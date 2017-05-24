@@ -8,13 +8,12 @@
 
   <div class="md-txt col-md-9">
   <ul>
-    <li>Work1</li>{{#link-to 'info'}} Accept work  {{/link-to}} {{#link-to 'info'}} Decline work  {{/link-to}}
-<li>Work2</li>{{#link-to 'info'}} Accept work  {{/link-to}} {{#link-to 'info'}} Decline work  {{/link-to}}
-<li>Work3</li>{{#link-to 'info'}} Accept work  {{/link-to}} {{#link-to 'info'}} Decline work  {{/link-to}}
-<li>Work4</li>{{#link-to 'info'}} Accept work  {{/link-to}} {{#link-to 'info'}} Decline work  {{/link-to}}
+    {{#each model.docs as |model|}}
+    <li>Work: {{model.name}} - {{model.userId.lastName}}    &nbsp;&nbsp; {{#link-to 'info'}} Accept work  {{/link-to}} &nbsp;&nbsp;{{#link-to 'info'}} Decline work  {{/link-to}}</li>
+    <br>
+  {{/each}}
   </ul>
   </div>
-  <div class="md-txt col-md-3">{{#link-to 'acceptedworks'}} Accepted works {{/link-to}}</div>
 </div>
 
 </div>

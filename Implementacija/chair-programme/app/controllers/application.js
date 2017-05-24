@@ -8,11 +8,6 @@ export default Ember.Controller.extend({
         logout() {
             this.get('session').invalidate();
         }
-    },
-
-   isAdmin: function (params) {
-      //returning the boolean value to the called function
-      return param1 === "Administrator";
-   }.property('content.isAdmin'),
+    }
 
 });

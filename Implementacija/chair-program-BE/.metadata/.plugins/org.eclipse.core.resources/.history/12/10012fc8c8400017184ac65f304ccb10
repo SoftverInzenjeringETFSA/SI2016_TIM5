@@ -39,17 +39,5 @@ public class DocumentController  extends BaseRestController<Document, DocumentRe
 		return documentRepository.findUserReviewed(id);
 	}
 	
-	@CrossOrigin
-	@GetMapping(path="/DocsForReview")
-	public @ResponseBody List<Document> DocsForReview() {
-		return documentRepository.findDocsForReview();
-	}
-	
-	@CrossOrigin
-	@GetMapping(path="/getReviewerDocs")
-	public @ResponseBody List<Document> getReviewerDocs(@RequestParam("id") Long id)  {
-		return documentRepository.findReviewerDocs(id);
-	}
-	
 	
 }

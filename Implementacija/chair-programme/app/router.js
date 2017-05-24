@@ -35,6 +35,7 @@ Router.map(function() {
     this.route('show', { path: '/:id' });
     this.route('userdoc');
     this.route('userRdoc');
+    this.route('docsforreview');
   });
   this.route('acceptedworks');
   this.route('overviewworks');
@@ -42,6 +43,7 @@ Router.map(function() {
   this.route('userpage');
   this.route('add');
   this.route('addAdmin');
+  this.route('add-admin');
 });
 
 export default Router;
