@@ -9,8 +9,8 @@ export default Ember.Route.extend({
     if (!this.get('session.isAuthenticated')) {
       this.transitionTo('login');
     }
-    //ovo jos nije, ne poredi modele
-    else if (this.get('session.data.authenticated.korisnik.roleId') === this.get('roleService').getById(2) || this.get('session.data.authenticated.korisnik.roleId') === this.get('roleService').getById(3) )
+    //ovo je sad ok
+    else if (this.get('session.data.authenticated.korisnik.roleId.roleName') != "Administator" )
     {
       var previousTransition = this.get('previousTransition');
       if (previousTransition) {

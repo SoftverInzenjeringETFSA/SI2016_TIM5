@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   roleService: Ember.inject.service(),
+  session: Ember.inject.service(),
 
   model: function() {
     return Ember.RSVP.hash({

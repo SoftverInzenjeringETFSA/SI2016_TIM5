@@ -12,14 +12,24 @@
 
 				<div id="navbarCollapse" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-left">
-						<li > <h1 class="bg-txt col-md-12">Welcome, <br> {{ session.data.authenticated.korisnik.firstName }} {{ session.data.authenticated.korisnik.lastName }}! </h1></li>
+
+						<li > <h1 class="bg-txt col-md-12">Welcome, <br> {{ session.data.authenticated.korisnik.firstName }} {{ session.data.authenticated.korisnik.lastName }}! </h1> </li>
+
+
+						{{#if (eq (string session.data.authenticated.korisnik.roleId.roleName) "Administator")}}
 						<li> 	{{#link-to 'adminpage'}} Admin page {{/link-to}} </li>
+						{{/if}}
+						{{#if (eq (string session.data.authenticated.korisnik.roleId.roleName) "Reviewer")}}
+						<li> 	{{#link-to 'info'}} Reviewer page {{/link-to}} </li>
+						{{/if}}
+						{{#if (eq (string session.data.authenticated.korisnik.roleId.roleName) "Registered user")}}
+						<li> 	{{#link-to 'reviewerpage'}} User page {{/link-to}} </li>
+						{{/if}}
+
 						<li {{action 'logout' on='click'}}> {{#link-to 'login' }} Log out {{/link-to}}</li>
 					</ul>
 
 				</div>
-
-
 
 				{{else}}
 				<li class="md-txt"> {{#link-to 'login'}} Login   {{/link-to}}</li>
