@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+
   roleService: Ember.inject.service(),
   session: Ember.inject.service(),
 
@@ -10,7 +11,7 @@ export default Ember.Route.extend({
       this.transitionTo('login');
     }
     //ovo je sad ok
-    else if (this.get('session.data.authenticated.korisnik.roleId.roleName') != "Reviewer" )
+    else if (this.get('session.data.authenticated.korisnik.roleId.roleName') != "Registered user" )
     {
       var previousTransition = this.get('previousTransition');
       if (previousTransition) {

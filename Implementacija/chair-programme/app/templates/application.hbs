@@ -20,10 +20,10 @@
 						<li> 	{{#link-to 'adminpage'}} Admin page {{/link-to}} </li>
 						{{/if}}
 						{{#if (eq (string session.data.authenticated.korisnik.roleId.roleName) "Reviewer")}}
-						<li> 	{{#link-to 'info'}} Reviewer page {{/link-to}} </li>
+						<li> 	{{#link-to 'reviewerpage'}} Reviewer page {{/link-to}} </li>
 						{{/if}}
 						{{#if (eq (string session.data.authenticated.korisnik.roleId.roleName) "Registered user")}}
-						<li> 	{{#link-to 'reviewerpage'}} User page {{/link-to}} </li>
+						<li> 	{{#link-to 'userpage'}} User page {{/link-to}} </li>
 						{{/if}}
 
 						<li {{action 'logout' on='click'}}> {{#link-to 'login' }} Log out {{/link-to}}</li>

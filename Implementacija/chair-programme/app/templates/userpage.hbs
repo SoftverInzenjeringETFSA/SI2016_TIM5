@@ -1,0 +1,28 @@
+
+<div class="container">
+<div class="row">
+<h1 class="bg-txt col-md-12">Welcome user</h1>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-9">
+<h1 class="bg-txt">Submit work</h1>
+<form>
+  <input type="file" accept="pdf/*" name="userwork" id="userwork" required>
+<br>
+        <div class="labela" id="labeluserwork"></div>
+        {{input type="checkbox" id="test5" checked=isChecked}} <label for="test5">I accept the terms and conditions for the transfer of my work and public sharing my personal data.</label>
+<br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<div class="col-md-3">
+  {{#link-to 'passwordchange'}}<a href="passwordchange">Change password</a>{{/link-to}} <br>
+</div>
+</div>
+
+</div>
+
+{{ sponsors-section }}
+{{ main-footer }}

@@ -36,6 +36,7 @@ Router.map(function() {
   this.route('acceptedworks');
   this.route('overviewworks');
   this.route('reviewerpage');
+  this.route('userpage');
 });
 
 export default Router;
