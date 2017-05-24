@@ -32,11 +32,16 @@ Router.map(function() {
   });
 
   this.route('dokument', function() {
-    this.route('show', { path: '/:id' });  });
+    this.route('show', { path: '/:id' });
+    this.route('userdoc');
+    this.route('userRdoc');
+  });
   this.route('acceptedworks');
   this.route('overviewworks');
   this.route('reviewerpage');
   this.route('userpage');
+  this.route('add');
+  this.route('addAdmin');
 });
 
 export default Router;

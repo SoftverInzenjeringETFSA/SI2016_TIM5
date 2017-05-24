@@ -1,14 +1,16 @@
 {{log model.speaker}}
 <section>
-    <div class="container">
-        <div class = "row">
-            <h1 class = "bg-txt">Speaker profile</h1>
+  <div class="container">
+    <div class = "row">
+      <h1 class = "bg-txt">Speaker profile</h1>
 
-            <h2 class = "md-txt">{{model.speaker.firstName}} {{model.speaker.lastName}}</h2>
-            <p class = "sm-txt" align = "justify"><b>Short bio:  </b> {{model.speaker.cv}}</p>
-             <p class = "sm-txt" align = "justify"><b>Abstract: </b>{{model.speaker.info}} </p>
-              <img src={{model.speaker.imageLink}} alt="">
-              <br/>
-        </div>
+      <h2 class = "md-txt">{{model.speaker.firstName}} {{model.speaker.lastName}}</h2>
+      <p class = "sm-txt" align = "justify"><b>Short bio:  </b> {{model.speaker.cv}}</p>
+      <p class = "sm-txt" align = "justify"><b>Abstract: </b>{{model.speaker.info}} </p>
+      <img src={{model.speaker.imageLink}} alt="">
+      <br/>
     </div>
+  </div>
 </section><br>
+
+{{ main-footer }}

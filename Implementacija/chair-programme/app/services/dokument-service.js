@@ -23,6 +23,26 @@ export default BaseService.extend({
         });
 
         return dokument;
+    },
+
+    allUserDocs: function(id) {
+        var dokuments = []; // ovdje prazan objekat
+        this.ajax({ url: "http://localhost:8080/documents/allUserDocs?id="+id, type: "GET" }).then(function(data) {
+            data.forEach(function(dokument) {
+                dokuments.addObject(dokument);
+            });
+        });
+        return dokuments;
+    },
+
+    allUserRDocs: function(id) {
+        var dokuments = []; // ovdje prazan objekat
+        this.ajax({ url: "http://localhost:8080/documents/allUserRDocs?id="+id, type: "GET" }).then(function(data) {
+            data.forEach(function(dokument) {
+                dokuments.addObject(dokument);
+            });
+        });
+        return dokuments;
     }
 
 });
