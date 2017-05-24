@@ -45,12 +45,12 @@ public class JwtService {
 		}
 
 		return true;
-	}
+	} 
 	
 	public static Boolean verifyTokenForAdmin(String jwt) {
-		if (jwt == null) {
+		/*if (jwt == null) {
 			return false;
-		}
+		}*/
 		
 		try {
 			Jwts.parser().setSigningKey(SECRET).require("isAdmin", true).parseClaimsJws(jwt);

@@ -31,8 +31,11 @@ Router.map(function() {
     this.route('reviewers');
   });
 
-    this.route('dokument', function() {
-      this.route('show', { path: '/:id' });  });
+  this.route('dokument', function() {
+    this.route('show', { path: '/:id' });  });
+  this.route('acceptedworks');
+  this.route('overviewworks');
+  this.route('reviewerpage');
 });
 
 export default Router;

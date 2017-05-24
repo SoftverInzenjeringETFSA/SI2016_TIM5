@@ -8,6 +8,4 @@ export default Ember.Route.extend({
       reviewers: this.get('userService').getReviewers()
     });
   }
-
-
 });

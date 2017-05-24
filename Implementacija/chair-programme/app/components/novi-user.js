@@ -49,6 +49,6 @@ userService: Ember.inject.service(),
             }
 		}
 
-	},
+	}
 
 });

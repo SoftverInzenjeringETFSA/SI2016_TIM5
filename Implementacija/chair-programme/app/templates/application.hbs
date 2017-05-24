@@ -1,17 +1,30 @@
 {{ main-navbar }}
+{{log model.admin}}
+{{log model.reviewer}}
+{{log model.basicUser}}
 <section class="sponsors-section-holder">
-<div class="container">
-	<div class="row">
-  
-    <div id="navbarCollapse" class="collapse navbar-collapse">
-{{#if session.isAuthenticated}}
-  <li>Welcome {{ session.data.authenticated.korisnik.email }} </li>
-  <li {{action 'logout' on='click'}}> Log out</li>
+	<div class="container">
+		<div class="row">
 
-{{else}}
-    <li> {{#link-to 'login'}}Login  {{/link-to}}</li>
-{{/if}}
-  </div>  </div></div>
+			<div id="navbarCollapse" class="collapse navbar-collapse">
+				{{#if session.isAuthenticated}}
 
-  </section>
-{{outlet}}
+
+				<div id="navbarCollapse" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li > <h1 class="bg-txt col-md-12">Welcome, <br> {{ session.data.authenticated.korisnik.firstName }} {{ session.data.authenticated.korisnik.lastName }}! </h1></li>
+						<li> 	{{#link-to 'adminpage'}} Admin page {{/link-to}} </li>
+						<li {{action 'logout' on='click'}}> {{#link-to 'login' }} Log out {{/link-to}}</li>
+					</ul>
+
+				</div>
+
+
+
+				{{else}}
+				<li class="md-txt"> {{#link-to 'login'}} Login   {{/link-to}}</li>
+				{{/if}}
+			</div>  </div></div>
+
+		</section>
+		{{outlet}}

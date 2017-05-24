@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   roleService: Ember.inject.service(),
   userService: Ember.inject.service(),
 	model: function(){
-    role: this.get('roleService').getById(3);
+    role: this.get('roleService').getById();
 		return{firstName:'',lastName:'',email:'',password:'',roleId:this.get('roleService').getById(3),isVerified:'',state:'',city:'',note:'',function:''};
 	},
 
