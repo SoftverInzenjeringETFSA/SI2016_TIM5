@@ -9,7 +9,7 @@
   <div class="md-txt col-md-9">
   <ul>
     {{#each model.docs as |model|}}
-    <li>Work: {{model.name}} - {{model.userId.lastName}}    &nbsp;&nbsp; {{#link-to 'info'}} Accept work  {{/link-to}} &nbsp;&nbsp;{{#link-to 'info'}} Decline work  {{/link-to}}</li>
+    <li>Work:  <a href= {{model.documentLink}}> {{model.name}}  </a> - {{model.userId.lastName}}    &nbsp;&nbsp; {{#link-to 'info'}} Accept work  {{/link-to}} &nbsp;&nbsp;{{#link-to 'info'}} Decline work  {{/link-to}}</li>
     <br>
   {{/each}}
   </ul>
