@@ -46,8 +46,8 @@ public class UserController extends BaseRestController<User, UserRepository>{
 	
 	@RequestMapping(value="/change", method=RequestMethod.POST)
 	@ResponseBody
-	public String method8(@RequestParam("newpassword") String newpassword, @RequestParam("oldpassword") String oldpassword){
-		userRepository.resetPassword(newpassword, oldpassword);
+	public String method8(@PathVariable("oldpassword") String oldpassword, @PathVariable("newpassword") String newpassword){
+		userRepository.resetPassword(oldpassword, newpassword);
 		return "succes";
 	}
 	

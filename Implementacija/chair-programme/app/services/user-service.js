@@ -22,6 +22,16 @@ export default BaseService.extend({
         return user;
     },
 
+    getByPassword: function(password) {
+        var user = User.create({});
+        this.ajax({ url: "http://localhost:8080/users/get?password="+password, type: "GET"}).then(function(data) {
+
+        user.setProperties(data);
+        });
+
+        return user;
+    },
+
     getReviewers: function() {
         var reviewers = [];
         this.ajax({ url: "http://localhost:8080/users/reviewers", type: "GET" }).then(function(data) {
@@ -46,7 +56,11 @@ export default BaseService.extend({
 
     register: function(data) {
       return this.ajax({ url: "http://localhost:8080/users/create", type: "POST", data: JSON.stringify(data)})
-  }
+  },
+
+  update: function(user, id) {
+        return this.ajax({ url: "http://localhost:8080/users/update?id="+id, type: "POST", data: JSON.stringify(user)});
+    },
 
 
 });

@@ -23,6 +23,6 @@ public interface UserRepository extends CrudRepository<User, Long> {
 	public List<User> findByName(String name,String lastName);
 	
 	@Modifying
-	@Query("update User u set u.password = ? where oldpassword= ?")
+	@Query("update User u set u.password = ? where oldpassword=?")
 	public void resetPassword(String newpassword, String oldpassword);
 }

@@ -2,7 +2,6 @@ package ba.actis.repositories;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
@@ -22,7 +21,4 @@ public interface UserRepository extends CrudRepository<User, Long> {
 	@Query("select u from User u where first_name LIKE ? or last_name LIKE ?")
 	public List<User> findByName(String name,String lastName);
 	
-	@Modifying
-	@Query("update User u set u.password = ? where oldpassword= ?")
-	public void resetPassword(String newpassword, String oldpassword);
 }

@@ -2,6 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   session: Ember.inject.service(),
+  userService: Ember.inject.service(),
+
+  
+
 
   beforeModel(transition) {
     //ovo je ok
