@@ -1,4 +1,5 @@
 {{log model.users}}
+{{log model.results}}
 {{log model.role}}
 
 <section>
@@ -8,6 +9,33 @@
     </div>
   </div>
 </section>
+<div class="container">
+  <div class="row">
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        {{input value=name placeholder="Search"}}
+      </div>
+      <button type="submit" class="btn btn-default"  {{action 'searchUsers' name}}>Submit</button>
+    </form>
+  </div>
+</div>
+
+{{#each model.results as |result|}}
+
+<section>
+  <div class="container">
+    <div class = "row">
+      {{#link-to "users.show" result.id}}  <h2 class = "md-txt">  {{result.id}}. {{result.firstName}} {{result.lastName}}</h2> {{/link-to}}
+      <p class = "sm-txt" align = "justify"><b>Email:  </b> {{result.email}}</p>
+      <p class = "sm-txt" align = "justify"><b>Role: </b>{{result.roleId.roleName}} </p>
+      <p class = "sm-txt" align = "justify"><b>City:  </b> {{result.city}}</p>
+      <p class = "sm-txt" align = "justify"><b>State:  </b> {{result.state}}</p>
+      <p class = "sm-txt" align = "justify"><b>Function:  </b> {{result.function}}</p>
+    </div>
+  </div>
+</section>
+{{/each}}
+
 {{#each model.users as |model|}}
 
 <section>

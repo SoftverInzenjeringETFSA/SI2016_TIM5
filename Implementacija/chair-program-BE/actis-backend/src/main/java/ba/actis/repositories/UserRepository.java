@@ -18,4 +18,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
 	@Query("select u from User u where email=? and password=?")
 	public User findByUsernameAndPassword(String email, String password);
 	
+	@Query("select u from User u where first_name=? or last_name=?")
+	public List<User> findByName(String name,String lastName);
+	
 }

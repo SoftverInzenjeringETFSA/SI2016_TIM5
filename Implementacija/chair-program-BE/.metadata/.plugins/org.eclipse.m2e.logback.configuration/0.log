@@ -2651,3 +2651,112 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Duplicated 
 2017-05-25 00:20:47,322 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-05-25 00:20:47,322 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\test\resources
 2017-05-25 14:10:52,304 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-05-25 15:32:06,844 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: ba.actis:actis-backend:1.0-SNAPSHOT @ C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\pom.xml.
+2017-05-25 15:32:10,865 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 15:32:10,876 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 15:32:10,918 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 15:32:10,931 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 15:32:10,931 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 15:32:13,438 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: ba.actis:actis-backend:1.0-SNAPSHOT @ C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\pom.xml.
+2017-05-25 15:32:16,264 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 15:32:16,270 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 15:32:16,274 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 15:32:16,281 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 15:32:16,281 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 15:32:18,531 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 15:32:18,533 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 15:32:18,536 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 15:32:18,538 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 15:32:18,538 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:18:28,062 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:18:28,062 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-25 16:18:28,063 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-25 16:18:28,064 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:18:28,065 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:18:35,118 [Worker-30] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-05-25 16:18:36,059 [Worker-30] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: ba.actis:actis-backend:1.0-SNAPSHOT @ C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\pom.xml.
+2017-05-25 16:18:37,592 [Worker-30] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /actis-backend/src/main/java
+2017-05-25 16:18:37,593 [Worker-30] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /actis-backend/src/main/resources
+2017-05-25 16:18:37,593 [Worker-30] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /actis-backend/src/main/resources
+2017-05-25 16:18:37,593 [Worker-30] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /actis-backend/src/test/java
+2017-05-25 16:18:37,947 [Worker-30] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2017-05-25 16:18:38,993 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:18:38,994 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:18:39,005 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:18:39,010 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:18:39,010 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:19:42,723 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:19:42,725 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:19:42,728 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:19:42,730 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:19:42,730 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:20:48,416 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:20:48,418 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:20:48,421 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:20:48,423 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:20:48,423 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:21:12,095 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:21:12,097 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:21:12,099 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:21:12,101 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:21:12,101 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:21:32,942 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:21:32,944 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:21:32,946 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:21:32,948 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:21:32,948 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:25:37,386 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:25:37,388 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:25:37,391 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:25:37,393 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:25:37,394 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:25:38,428 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:25:38,432 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:25:38,441 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:25:38,444 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:25:38,444 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:27:47,439 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:27:47,440 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:27:47,443 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:27:47,447 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:27:47,447 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:27:48,462 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:27:48,463 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:27:48,466 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:27:48,467 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:27:48,468 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:29:19,986 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:29:19,988 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:29:19,990 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:29:19,992 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:29:19,992 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:29:21,006 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:29:21,008 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:29:21,010 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:29:21,011 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:29:21,012 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:29:27,206 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:29:27,207 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:29:27,210 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:29:27,211 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:29:27,212 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:31:03,234 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:31:03,236 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:31:03,239 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:31:03,241 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:31:03,241 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:31:04,255 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:31:04,256 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:31:04,258 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:31:04,260 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:31:04,260 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:31:08,678 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:31:08,679 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:31:08,682 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:31:08,684 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:31:08,684 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-25 16:31:09,766 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:31:09,768 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-25 16:31:09,772 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-25 16:31:09,776 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-25 16:31:09,776 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources

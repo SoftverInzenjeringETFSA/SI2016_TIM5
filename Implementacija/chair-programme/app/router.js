@@ -44,6 +44,7 @@ Router.map(function() {
   this.route('add');
   this.route('addAdmin');
   this.route('add-admin');
+  this.route('search');
 });
 
 export default Router;

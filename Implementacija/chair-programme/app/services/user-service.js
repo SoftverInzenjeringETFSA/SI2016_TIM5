@@ -15,11 +15,8 @@ export default BaseService.extend({
     getById: function(id) {
         var user = User.create({});
         this.ajax({ url: "http://localhost:8080/users/get?id="+id, type: "GET"}).then(function(data) {
-        	console.log("data: ");
-        console.log(data);
+
         user.setProperties(data);
-        	console.log("created: ");
-        	console.log(user);
         });
 
         return user;
@@ -33,6 +30,18 @@ export default BaseService.extend({
             });
         });
         return reviewers;
+    },
+
+    getByName: function(name) {
+      var users = [];
+      this.ajax({ url: "http://localhost:8080/users/results?name="+name, type: "GET" }).then(function(data) {
+          data.forEach(function(user) {
+
+            console.log(user);
+              users.addObject(user);
+          });
+      });
+      return users;
     },
 
     register: function(data) {

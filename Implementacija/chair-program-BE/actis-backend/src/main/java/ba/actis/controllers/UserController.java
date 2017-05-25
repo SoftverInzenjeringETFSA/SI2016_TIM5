@@ -30,6 +30,12 @@ public class UserController extends BaseRestController<User, UserRepository>{
 	}
 	
 	@CrossOrigin
+	@GetMapping(path="/results")
+	public @ResponseBody List<User> getByName(@RequestParam("name") String name) {
+		return userRepository.findByName(name,name);
+	}
+	
+	@CrossOrigin
 	@GetMapping(path="/reviewers")
 	public @ResponseBody List<User> getReviewers() {
 		return userRepository.findReviewers();
