@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2017 at 09:27 PM
+-- Generation Time: May 25, 2017 at 11:06 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -100,7 +100,7 @@ CREATE TABLE `user` (
   `first_name` varchar(25) NOT NULL,
   `last_name` varchar(25) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(20) DEFAULT NULL,
   `city` varchar(50) DEFAULT NULL,
   `state` varchar(50) DEFAULT NULL,
   `role_id` int(11) NOT NULL,

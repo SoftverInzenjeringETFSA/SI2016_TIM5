@@ -58,8 +58,8 @@ export default BaseService.extend({
       return this.ajax({ url: "http://localhost:8080/users/create", type: "POST", data: JSON.stringify(data)})
   },
 
-  update: function(user, id) {
-        return this.ajax({ url: "http://localhost:8080/users/update?id="+id, type: "POST", data: JSON.stringify(user)});
+  update: function(password,id) {
+        return this.ajax({ url: "http://localhost:8080/users/update?pass="+password+"&id=" + id, type: "POST"});
     },
 
 
