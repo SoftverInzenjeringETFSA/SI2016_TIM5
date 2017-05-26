@@ -6,6 +6,9 @@ userService: Ember.inject.service(),
 	errors:DS.Errors.create(),
 
 	validate: function(){
+
+		let regNumber = /\d+/;
+		let regCharNumber = /^[\d]*[\w]+[\d]*$/;
 		this.set('errors',DS.Errors.create());
 
 		if(this.get('user.firstName')==='' || this.get('user.firstName')===undefined){
@@ -27,7 +30,7 @@ userService: Ember.inject.service(),
 			this.get('errors').add('password','Input password!');
 		}
 
-		if(this.get('user.password').length < 8 ){
+		if(this.get('user.password').length < 8 || this.get('user.password').length > 20 || !this.get('user.password').match(regNumber) || !this.get('user.password').match(regCharNumber)){
 			this.get('errors').add('password','Your password must be at least 8 characters and at least one number!');
 		}
 

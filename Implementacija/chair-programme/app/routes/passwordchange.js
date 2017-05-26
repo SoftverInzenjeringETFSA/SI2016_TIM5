@@ -4,9 +4,6 @@ export default Ember.Route.extend({
   session: Ember.inject.service(),
   userService: Ember.inject.service(),
 
-
-
-
   beforeModel(transition) {
     //ovo je ok
     if (!this.get('session.isAuthenticated')) {
@@ -16,11 +13,13 @@ export default Ember.Route.extend({
   },
 
   model: function(params, transition) {
-    let idusera = this.get('session.data.authenticated.korisnik.id'); 
+    let idusera = this.get('session.data.authenticated.korisnik.id');
+    let _trenutni = this.get('userService').getById(idusera);
 		let _neko = this.get('userService').getById(idusera);
 
 		return Ember.RSVP.hash({
-        	neko: _neko
+        	neko: _neko,
+          trenutni: _trenutni
     	})
 
 	}

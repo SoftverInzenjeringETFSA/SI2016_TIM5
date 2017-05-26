@@ -7,17 +7,27 @@ export default Ember.Controller.extend({
   notify: Ember.inject.service('notify'),
   passwordGreska : false,
   oldPasswordGreska : false,
+  passwordConfirmGreska : false,
+
 
 // validacija starog i novo passworda
-validation: function(oldpass){
-  let p = this.get('session.data.authenticated.korisnik.password');
-  this.set("oldPasswordGreska",false);
-  this.set("oldPasswordGreska",false);
-  let IncorrectPasswords = true;
-//  let regNumber = /\d+/;
-//  let regCharNumber = /^[\d]*[\w]+[\d]*$/;
+validation: function(oldpass, passwordConfirm){
+  //ucitavanje trenutno iz modela rute
+  let _u = this.get('model.trenutni');
+  console.log(_u);
 
-  	if(oldpass != p) {
+//postavljanje sve na false
+  this.set("oldPasswordGreska",false);
+  this.set("oldPasswordGreska",false);
+  this.set("passwordConfirmGreska",false);
+  let IncorrectPasswords = true;
+
+//regexi
+  let regNumber = /\d+/;
+  let regCharNumber = /^[\d]*[\w]+[\d]*$/;
+
+//provjera trenutnog
+  	if(oldpass != _u.password) {
     this.set("oldPasswordGreska",true);
     IncorrectPasswords= false;
   }
@@ -25,8 +35,8 @@ validation: function(oldpass){
     this.set("oldPasswordGreska",false);
   }
 
-//|| !this.get("model.neko.password").match(regNumber) || !this.get("model.neko.password").match(regCharNumber)
-  if (this.get("model.neko.password") == "" || this.get("model.neko.password").length < 8 || this.get("model.neko.password").length > 20 ){
+//provjera novog
+  if (this.get("model.neko.password") == "" || this.get("model.neko.password").length < 8 || this.get("model.neko.password").length > 20 || !this.get("model.neko.password").match(regNumber) || !this.get("model.neko.password").match(regCharNumber)){
       this.set("passwordGreska",true);
       IncorrectPasswords = false;
   }
@@ -34,6 +44,15 @@ validation: function(oldpass){
     this.set("passwordGreska",false);
     }
 
+//provjera novog i potvrdjene sifre
+    if(passwordConfirm != this.get("model.neko.password")) {
+    this.set("passwordConfirmGreska",true);
+    IncorrectPasswords= false;
+  } else {
+      this.set("passwordConfirmGreska",false);
+      }
+
+//vrati ima li gresaka
   return IncorrectPasswords;
 },
 
@@ -44,14 +63,22 @@ validation: function(oldpass){
 
   actions: {
     //akcija updatevoanje user-a na dugme submit
-    update: function(oldpass) {
+    update: function(oldpass,password,passwordConfirm) {
     let _user = this.get('model.neko');
     console.log(_user);
+    _user.password = password;
 //prvo ide validacija
-//	if(this.validation(oldpass)){
-    //_user.password = novipass;
+if(this.validation(oldpass, passwordConfirm)){
       this.update(_user.password,_user.id);
       this.get('notify').info("Password Successfully Changed!");
+      var previousTransition = this.get('previousTransition');
+      if (previousTransition) {
+        this.set('previousTransition', null);
+        previousTransition.retry();
+      } else {
+        // Default back to homepage
+        this.transitionToRoute('index');
+      }    }
 }}
 
 
