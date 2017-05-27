@@ -9,7 +9,13 @@
   <div class="md-txt col-md-9">
   <ul>
     {{#each model.docs as |model|}}
-    <li>Work:  <a href= {{model.documentLink}}> {{model.name}}  </a> - {{model.userId.lastName}}    &nbsp;&nbsp; {{#link-to 'info'}} Accept work  {{/link-to}} &nbsp;&nbsp;{{#link-to 'info'}} Decline work  {{/link-to}}</li>
+    <li>Work:  <a href= {{model.documentLink}}> {{model.name}}  </a> - {{model.userId.lastName}}  </li>  &nbsp;&nbsp;
+    <li>   {{input  class="form-control" id="inputReview" value=review
+      placeholder="Review"  }}
+
+       <button class="btn btn-primary" {{action 'submitReview' model.id review}}>Accept work</button>
+      <button class="btn btn-primary" {{action 'submitReview' model.id review}}>Decline work</button> &nbsp;&nbsp;
+  </li>
     <br>
   {{/each}}
   </ul>

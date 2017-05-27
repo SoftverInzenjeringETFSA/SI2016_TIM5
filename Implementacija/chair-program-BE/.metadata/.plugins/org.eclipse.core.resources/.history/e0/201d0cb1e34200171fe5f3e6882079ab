@@ -39,6 +39,6 @@ public interface DocumentRepository extends CrudRepository<Document, Long> {
 	public Integer resetReviewer(Long id);
 	
 	@Modifying(clearAutomatically = true)
-	@Query("update Document d set d.review=? where d.id=?")
+	@Query("update Document d set review=? where d.id=?")
 	public Integer setReview(String review, Long id);
 }
