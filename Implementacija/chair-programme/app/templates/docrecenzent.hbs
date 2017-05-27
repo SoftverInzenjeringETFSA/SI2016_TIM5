@@ -1,3 +1,5 @@
+{{ember-notify closeAfter=5000}}
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
@@ -13,31 +15,55 @@
 </div>
 <br><br>
 
+<form >
+  <div class="row">
+
 <div class="col-md-6">
-  <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Document
-      <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        {{#each model.dokuments as |model|}}
-        <li><a href="#"> {{model.userId.firstName}} {{model.userId.lastName}}: {{model.documentLink}}  </a></li>
-          {{/each}}
-      </ul>
-    </div>
+    {{#each model.dokuments as |doc|}}
+    {{doc.id}}. {{doc.name}} - {{doc.userId.firstName}} {{doc.userId.lastName}}
+    <br>
+    {{/each}}
 </div>
 <div class="col-md-6">
-  <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button"  data-toggle="dropdown">Reviewer
-      <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        {{#each model.reviewers as |model|}}
-        <li><a href="#"> {{model.firstName}} {{model.lastName}} </a></li>
-          {{/each}}
-      </ul>
-    </div>
+  {{#each model.reviewers as |recezent|}}
+  {{recezent.id}}.  {{recezent.firstName}} {{recezent.lastName}}
+  <br>
+  {{/each}}
 </div>
 </div>
+
+<br>
 <div class="row">
-<div class="col-md-12"><button type="submit" class="btn btn-primary">Submit</button></div>
+
+<div class="col-md-6">
+<div class="form-group">
+  <label for="inputPassword">Input document ID </label>
+  {{input type="number" class="form-control" value=dokId id="inputNewPassword" placeholder="Document ID"}}
+  {{#if izabranDoc}}
+      <span class="help-block"> Incorrect ID! </span>
+  {{/if}}
+</div>
+</div>
+
+<div class="col-md-6">
+
+<div class="form-group">
+  <label for="inputPassword">Input Reviewer ID</label>
+  {{input  type="number" class="form-control" value=recID id="confirmNewPassword" placeholder="Reviewer ID"}}
+  {{#if izabranReviewer}}
+      <span class="help-block"> Incorrect ID!  </span>
+  {{/if}}
+  {{#if greska}}
+      <span class="help-block"> Document is successfully assigned.!  </span>
+  {{/if}}
+</div>
+</div>
+</div>
+
+
+<button type="submit" class="btn btn-primary" {{action 'submit' dokId recID}}>Submit</button>
+</form>
+
 </div>
 </div>
 {{ sponsors-section }}

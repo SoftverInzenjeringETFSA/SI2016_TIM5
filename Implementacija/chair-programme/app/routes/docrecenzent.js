@@ -8,6 +8,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       reviewers: this.get('userService').getReviewers(),
         dokuments: this.get('dokumentService').all()
+        
     });
 
   },

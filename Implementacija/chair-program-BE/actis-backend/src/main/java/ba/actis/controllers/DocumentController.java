@@ -6,14 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import ba.actis.models.Document;
 import ba.actis.models.Speaker;
+import ba.actis.models.User;
 import ba.actis.repositories.DocumentRepository;
 import ba.actis.repositories.SpeakerRepository;
+import ba.actis.repositories.UserRepository;
 
 @RestController
 @RequestMapping("/documents")
@@ -38,6 +41,7 @@ public class DocumentController  extends BaseRestController<Document, DocumentRe
 	public @ResponseBody List<Document> allUserRDocs(@RequestParam("id") Long id) {
 		return documentRepository.findUserReviewed(id);
 	}
+
 	
 	@CrossOrigin
 	@GetMapping(path="/DocsForReview")
@@ -50,6 +54,17 @@ public class DocumentController  extends BaseRestController<Document, DocumentRe
 	public @ResponseBody List<Document> getReviewerDocs(@RequestParam("id") Long id)  {
 		return documentRepository.findReviewerDocs(id);
 	}
+	
+	@Autowired
+	private UserController uc;
+	@CrossOrigin
+	 @RequestMapping(value = "/update", method = RequestMethod.POST)
+	  public @ResponseBody Integer updateReviewer(@RequestParam("reviewer") Long reviewerId, @RequestParam("id") Long id) {
+		User reviewer = uc.getById(reviewerId);
+		//return (long) 1;
+			return documentRepository.setReviewer(reviewer, id);
+
+	        }
 	
 	
 }

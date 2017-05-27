@@ -63,6 +63,9 @@ export default BaseService.extend({
             });
         });
         return dokuments;
-    }
+    },
+    updateReviewer: function(reviewerid,id) {
+          return this.ajax({ url: "http://localhost:8080/documents/update?reviewer="+reviewerid+"&id=" + id,type: "POST"});
+      },
 
 });
