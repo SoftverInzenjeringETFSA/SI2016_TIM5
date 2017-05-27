@@ -8,16 +8,10 @@
 <div class="row">
   <div class="col-md-6">
 <h1 class="bg-txt">Submit work</h1>
-<form>
-  <input type="file" accept="pdf/*" name="userwork" id="userwork" required>
-<br>
-<br>
-        <div class="labela" id="labeluserwork"></div>
-        {{input type="checkbox" id="test5" checked=isChecked}} <label for="test5">I accept the terms and conditions for the transfer of my work and public sharing my personal data.</label>
-<br>
-<br>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+{{#link-to 'worksubmit'}} 	<a class="btn btn-primary"> ADD DOCUMENT </a> {{/link-to}} 
+
+
 </div>
 <div class="col-md-6">
     <h1 class="bg-txt">Your documents</h1>

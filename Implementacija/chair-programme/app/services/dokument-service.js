@@ -67,5 +67,9 @@ export default BaseService.extend({
     updateReviewer: function(reviewerid,id) {
           return this.ajax({ url: "http://localhost:8080/documents/update?reviewer="+reviewerid+"&id=" + id,type: "POST"});
       },
+      register: function(data) {
+        console.log(data);
+        return this.ajax({ url: "http://localhost:8080/documents/create", type: "POST", data: JSON.stringify(data)})
+    },
 
 });

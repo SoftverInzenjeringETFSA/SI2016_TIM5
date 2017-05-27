@@ -2,6 +2,22 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   session: Ember.inject.service(),
+  dokumentService: Ember.inject.service(),
+  userService: Ember.inject.service(),
+  model: function(){
+    return{documentLink:'',userId:this.get('userService').getById(this.get('session.data.authenticated.korisnik.id')),reviewerId:null,isVerified:'',review:'',name:''};
+  },
+
+  setupController:function(controller,model){
+    controller.set('dokument',model);
+  },
+
+  actions:{
+    createDoc:function(dokument){
+            console.log(dokument);
+            this.get('dokumentService').register(dokument);
+    }
+  },
 
   beforeModel(transition) {
     //ovo je ok

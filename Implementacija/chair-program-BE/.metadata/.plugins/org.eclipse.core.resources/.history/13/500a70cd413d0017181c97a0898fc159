@@ -1,5 +1,0 @@
-package ba.actis.store;
-
-public interface SpeakerRepositoryInterface {
-
-}
