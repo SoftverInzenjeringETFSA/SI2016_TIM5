@@ -12,9 +12,7 @@ validate: function(){
   if(this.get('dokument.documentLink')==='' || this.get('dokument.documentLink')===undefined){
     this.get('errors').add('documentLink','Input document link!');
   }
-  if(!this.get('terms')){
-    this.get('errors').add('checkbox','Terms and conditions not accepted!');
-  }
+  
 
   return this.get('errors.isEmpty');
 },
