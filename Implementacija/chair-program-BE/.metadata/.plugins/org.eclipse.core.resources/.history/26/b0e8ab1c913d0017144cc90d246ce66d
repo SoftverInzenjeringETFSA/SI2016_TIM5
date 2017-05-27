@@ -1,8 +1,0 @@
-package ba.actis.controllers;
-
-import ba.actis.models.Document;
-import ba.actis.repositories.DocumentRepository;
-
-public class DocumentController extends BaseRestController<Document, DocumentRepository> {
-
-}

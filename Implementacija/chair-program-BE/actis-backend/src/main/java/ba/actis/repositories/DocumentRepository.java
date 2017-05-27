@@ -27,7 +27,7 @@ public interface DocumentRepository extends CrudRepository<Document, Long> {
 	@Query("select d from Document d where reviewer_id is NULL or review is NULL")
 	public List<Document> findDocsForReview();
 	
-	@Query("select d from Document d where reviewer_id=?")
+	@Query("select d from Document d where reviewer_id=? and d.review IS NULL")
 	public List<Document> findReviewerDocs(Long id);
 	
 	@Modifying(clearAutomatically = true)
