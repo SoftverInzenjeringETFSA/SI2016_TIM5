@@ -4027,3 +4027,17 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Duplicated 
 2017-05-27 16:43:38,006 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2017-05-27 16:43:38,008 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-05-27 16:43:38,008 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Korisnik\Desktop\Fakultet\SI2016_TIM5-master\Implementacija\chair-program-BE\actis-backend\src\test\resources
+2017-05-27 19:14:19,136 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-05-27 19:14:25,561 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: ba.actis:actis-backend:1.0-SNAPSHOT @ C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\pom.xml.
+2017-05-27 19:14:30,770 [Worker-1] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-05-27 19:14:31,821 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: ba.actis:actis-backend:1.0-SNAPSHOT @ C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\pom.xml.
+2017-05-27 19:14:32,606 [Worker-1] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /actis-backend/src/main/java
+2017-05-27 19:14:32,607 [Worker-1] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /actis-backend/src/main/resources
+2017-05-27 19:14:32,608 [Worker-1] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /actis-backend/src/main/resources
+2017-05-27 19:14:32,608 [Worker-1] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /actis-backend/src/test/java
+2017-05-27 19:14:32,844 [Worker-1] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2017-05-27 19:14:34,518 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 19:14:34,523 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-05-27 19:14:34,544 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 19:14:34,550 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 19:14:34,551 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Lejla\SI2016_TIM5\Implementacija\chair-program-BE\actis-backend\src\test\resources
