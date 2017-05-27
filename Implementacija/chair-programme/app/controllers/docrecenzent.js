@@ -80,7 +80,7 @@ actions: {
   submit: function(id, reviewerId){
     if(this.validation(id, reviewerId)){
           this.update(reviewerId, id);
-          this.get('notify').info("Successfull!");
+          this.get('notify').info("Successful!");
     /*      var previousTransition = this.get('previousTransition');
           if (previousTransition) {
             this.set('previousTransition', null);

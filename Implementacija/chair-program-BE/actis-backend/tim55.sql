@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2017 at 04:54 PM
+-- Generation Time: May 27, 2017 at 09:15 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -32,7 +32,7 @@ CREATE TABLE `document` (
   `document_link` varchar(500) NOT NULL,
   `user_id` int(11) NOT NULL,
   `reviewer_id` int(11) DEFAULT NULL,
-  `review` int(11) DEFAULT NULL,
+  `review` varchar(500) DEFAULT NULL,
   `is_approved` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -41,7 +41,7 @@ CREATE TABLE `document` (
 --
 
 INSERT INTO `document` (`id`, `name`, `document_link`, `user_id`, `reviewer_id`, `review`, `is_approved`) VALUES
-(1, 'Teme SI', 'https://docs.google.com/document/d/1Re5X0-H_Mu_sEWvXvKYLtwnT1Lgqaz-p2s0zXCu8T4Q/edit', 2, 4, NULL, 1),
+(1, 'Teme SI', 'https://docs.google.com/document/d/1Re5X0-H_Mu_sEWvXvKYLtwnT1Lgqaz-p2s0zXCu8T4Q/edit', 2, NULL, NULL, 1),
 (2, 'Senzori', 'https://docs.google.com/document/d/1iZf5sk7MumqJbQJJgChgaJMb5BGzHrCKdLofVxFqvDE/edit', 2, 3, NULL, 1);
 
 -- --------------------------------------------------------
@@ -113,9 +113,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `city`, `state`, `role_id`, `function`, `note`, `is_verified`) VALUES
-(1, 'Lejla', 'Kesko', 'lela.kesko@gmail.com', 'novasifra1', 'Hadzici', 'Sarajevo', 1, NULL, 'pitajkonobara', 1),
+(1, 'Lejla', 'Kesko', 'lela.kesko@gmail.com', 'lelakesko1', 'Hadzici', 'Sarajevo', 1, NULL, 'pitajkonobara', 1),
 (2, 'Imenko', 'Prezimenko', 'imenko.prezimenko@gmail.com', 'nemasifre1', NULL, NULL, 2, NULL, NULL, 1),
-(3, 'Simba', 'Limba', 'simba.limba@gmail.com', NULL, NULL, NULL, 3, NULL, NULL, 1),
+(3, 'Simba', 'Limba', 'simba.limba@gmail.com', 'simbalimba1', NULL, NULL, 3, NULL, NULL, 1),
 (4, 'Adna', 'Karkelja', 'adna.karkelja@gmail.com', 'karkelja1', NULL, NULL, 3, NULL, NULL, 1),
 (6, 'Proba', 'Registra', 'radi.li.ovo@gmail.com', 'radiliovo123', 'Travnik', 'BiH', 2, 'Student', 'Glup', 0),
 (7, 'Proba', 'Registra2', 'radiliovo@gmail.com', 'radiliovo2', '', '', 2, '', '', 0),
@@ -132,8 +132,8 @@ INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `city`
 --
 ALTER TABLE `document`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `reviewer_id` (`reviewer_id`) USING BTREE,
-  ADD KEY `user_id` (`user_id`) USING BTREE;
+  ADD KEY `user_id` (`user_id`) USING BTREE,
+  ADD KEY `reviewer_id` (`reviewer_id`) USING BTREE;
 
 --
 -- Indexes for table `role`
@@ -177,7 +177,7 @@ ALTER TABLE `speaker`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- Constraints for dumped tables
 --
