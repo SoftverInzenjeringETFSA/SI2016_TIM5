@@ -82,10 +82,4 @@ public class DocumentController  extends BaseRestController<Document, DocumentRe
 
 	        }
 	
-	@CrossOrigin
-	@GetMapping(path="/reviewedDocs")
-	public @ResponseBody List<Document> getReviewedDocs() {
-		return documentRepository.findReviewedDocs();
-	}
-	
 }

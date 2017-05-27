@@ -41,7 +41,4 @@ public interface DocumentRepository extends CrudRepository<Document, Long> {
 	@Modifying(clearAutomatically = true)
 	@Query("update Document d set d.review=? where d.id=?")
 	public Integer setReview(String review, Long id);
-	
-	@Query("select d from Document d where review is not NULL")
-	public List<Document> findReviewedDocs();
 }

@@ -1,0 +1,30 @@
+{{log model.dokuments}}
+{{log model.users}}
+
+<section>
+  <div class="container">
+    <div class = "row">
+      <h1 class = "bg-txt">Reviewed Documents </h1>
+    </div>
+  </div>
+</section>
+{{#each model.dokuments as |model|}}
+
+<section>
+  <div class="container">
+    <div class = "row">
+      <div class="col-md-2">
+        <img class="img-responsive center-block" src="assets/images/docLogo.png">
+      </div>
+        <div class="col-md-10">
+          <p class = "md-txt">  {{model.id}}. Document name: <a href= {{model.documentLink}}> {{model.name}}  </a></p>
+         <p class = "sm-txt" align = "justify"><b>Link:  </b> <a href= {{model.documentLink}}> {{model.documentLink}} </a> </p>
+      <p class = "sm-txt" align = "justify"><b>User:  </b> {{model.userId.firstName}} {{model.userId.lastName}}</p>
+      <p class = "sm-txt" align = "justify"><b>Reviewer:  </b> {{model.reviewerId.firstName}} {{model.reviewerId.lastName}}</p>
+      <p class = "sm-txt" align = "justify"><b>Review:  </b> {{model.review}} </p>
+
+    </div>
+    </div>
+  </div>
+</section>
+{{/each}}

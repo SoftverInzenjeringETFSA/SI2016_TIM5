@@ -78,4 +78,15 @@ export default BaseService.extend({
         return this.ajax({ url: "http://localhost:8080/documents/create", type: "POST", data: JSON.stringify(data)})
     },
 
+
+    getReviewedDocs: function() {
+        var dokuments = [];
+        this.ajax({ url: "http://localhost:8080/documents/reviewedDocs", type: "GET" }).then(function(data) {
+            data.forEach(function(dokument) {
+                dokuments.addObject(dokument);
+            });
+        });
+        return dokuments;
+    },
+
 });

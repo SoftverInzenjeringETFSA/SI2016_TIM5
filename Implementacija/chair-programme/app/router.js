@@ -36,6 +36,7 @@ Router.map(function() {
     this.route('userdoc');
     this.route('userRdoc');
     this.route('docsforreview');
+    this.route('reviewed');
   });
   this.route('acceptedworks');
   this.route('overviewworks');
@@ -45,6 +46,8 @@ Router.map(function() {
   this.route('addAdmin');
   this.route('add-admin');
   this.route('search');
+  this.route('document.reviewed');
+  this.route('dokument.reviewed');
 });
 
 export default Router;
