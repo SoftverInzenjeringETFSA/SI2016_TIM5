@@ -2,15 +2,32 @@
 <div class="row">
   <h1 class="bg-txt">Submit work</h1>
   <form>
+    <div class="form-group {{if errors.name 'has-error'}}">
     {{input  class="form-control" id="inputName" value=dokument.name
     placeholder="Document Name"}}
+    {{#each errors.name as |error|}}
+    <span class="help-block">{{error.message}}</span>
+    {{/each}}
+  </div>
+  <div class="form-group {{if errors.documentLink 'has-error'}}">
+
     {{input  class="form-control" id="inputLink" value=dokument.documentLink
     placeholder="Document Link"}}
+    {{#each errors.documentLink as |error|}}
+    <span class="help-block">{{error.message}}</span>
+    {{/each}}
+  </div>
     <br>
     <input type="file" accept="pdf/*" name="userwork" id="userwork" required>
 <br>
+<div class="form-group {{if errors.checkbox 'has-error'}}" >
+
   				<div class="labela" id="labeluserwork"></div>
-          {{input type="checkbox" id="test5" checked=isChecked}} <label for="test5">I accept the terms and conditions for the transfer of my work and public sharing my personal data.</label>
+          {{input type="checkbox" id="test5"  checked=isChecked}} <label for="test5">I accept the terms and conditions for the transfer of my work and public sharing my personal data.</label>
+          {{#each errors.checkbox as |error|}}
+          <span class="help-block">{{error.message}}</span>
+          {{/each}}
+        </div>
   <br>
 
 <br>
