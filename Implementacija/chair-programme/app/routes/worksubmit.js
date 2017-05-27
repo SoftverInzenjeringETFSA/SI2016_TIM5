@@ -4,8 +4,10 @@ export default Ember.Route.extend({
   session: Ember.inject.service(),
   dokumentService: Ember.inject.service(),
   userService: Ember.inject.service(),
+  notify: Ember.inject.service('notify'),
+
   model: function(){
-    return{documentLink:'',userId:this.get('userService').getById(this.get('session.data.authenticated.korisnik.id')),reviewerId:null,isVerified:'',review:'',name:''};
+    return{documentLink:'',userId:this.get('userService').getById(this.get('session.data.authenticated.korisnik.id')),reviewerId:null,isApproved:'',review:null,name:''};
   },
 
   setupController:function(controller,model){
@@ -16,6 +18,8 @@ export default Ember.Route.extend({
     createDoc:function(dokument){
             console.log(dokument);
             this.get('dokumentService').register(dokument);
+            this.get('notify').info('Successfull!');
+
     }
   },
 

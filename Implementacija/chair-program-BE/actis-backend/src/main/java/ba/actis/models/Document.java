@@ -28,9 +28,10 @@ public class Document {
 	@JoinColumn(name="reviewer_id")
 	private User reviewerId;
 	
-	private Boolean isApproved;
+	private boolean isApproved;
 	
 	Document (){}
+	
 	public Long getId() {
 		return id;
 	}
@@ -63,11 +64,11 @@ public class Document {
 		this.documentLink = documentLink;
 	}
 	
-	public Boolean getIsApproved() {
+	public boolean getIsApproved() {
 		return isApproved;
 	}
 	
-	public void setIsApproved(Boolean isApproved) {
+	public void setIsApproved(boolean isApproved) {
 		this.isApproved = isApproved;
 	}
 	public String getReview() {
