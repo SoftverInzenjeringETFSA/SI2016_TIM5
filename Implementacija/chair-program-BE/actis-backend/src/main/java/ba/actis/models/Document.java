@@ -22,7 +22,7 @@ public class Document {
 	private String documentLink;
 	private String name;
 
-	private Integer review;
+	private String review;
 	
 	@OneToOne(targetEntity= User.class)
 	@JoinColumn(name="reviewer_id")
@@ -70,10 +70,10 @@ public class Document {
 	public void setIsApproved(Boolean isApproved) {
 		this.isApproved = isApproved;
 	}
-	public Integer getReview() {
+	public String getReview() {
 		return review;
 	}
-	public void setReview(Integer review) {
+	public void setReview(String review) {
 		this.review = review;
 	}
 	public String getName() {
