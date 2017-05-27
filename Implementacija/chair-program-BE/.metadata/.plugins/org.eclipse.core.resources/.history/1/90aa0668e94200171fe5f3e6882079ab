@@ -34,11 +34,11 @@ public interface DocumentRepository extends CrudRepository<Document, Long> {
 	@Query("update Document d set reviewer_id=? where d.id=?")
 	public Integer setReviewer(User reviewer, Long id);
 
-	@Modifying(clearAutomatically = true)
-	@Query("update Document d set reviewer_id=NULL where d.id=?")
-	public Integer resetReviewer(Long id);
+/*	@Modifying(clearAutomatically = true)
+	@Query("update Document d set d.reviewer_id=null where d.id=?")
+	public Integer resetReviewer(Long id);*/
 	
 	@Modifying(clearAutomatically = true)
-	@Query("update Document d set d.review=? where d.id=?")
-	public Integer setReview(String review, Long id);
+	@Query("update Document d set d.review=?,d.reviewer_id=?  where d.id=?")
+	public Integer setReview(String review,Long r, Long id);
 }

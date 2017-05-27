@@ -14,7 +14,7 @@
       placeholder="Review"  }}
 
        <button class="btn btn-primary" {{action 'submitReview' model.id review}}>Accept work</button>
-      <button class="btn btn-primary" {{action 'submitReview' model.id review}}>Decline work</button> &nbsp;&nbsp;
+      <button class="btn btn-primary" {{action 'declineReview' model.id }}>Decline work</button> &nbsp;&nbsp;
   </li>
     <br>
   {{/each}}

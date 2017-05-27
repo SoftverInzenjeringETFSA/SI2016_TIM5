@@ -6,11 +6,20 @@ export default Ember.Controller.extend({
   update: function(id,review) {
           this.get('dokumentService').updateReview(id, review);
     },
+    decline: function(id) {
+            this.get('dokumentService').declineReview(id);
+      },
 actions: {
   submitReview: function(id, review){
     console.log(review);
           this.update(id, review);
-          this.get('notify').info("Successfull!");
+
+
+  },
+  declineReview: function(id){
+
+          this.decline(id);
+
 
   }
 }

@@ -70,6 +70,9 @@ export default BaseService.extend({
       updateReview: function(id,review) {
             return this.ajax({ url: "http://localhost:8080/documents/updateDoc?review="+review+"&id=" + id,type: "POST"});
         },
+        declineReview: function(id,review) {
+              return this.ajax({ url: "http://localhost:8080/documents/declineDoc?id=" + id,type: "POST"});
+          },
       register: function(data) {
         console.log(data);
         return this.ajax({ url: "http://localhost:8080/documents/create", type: "POST", data: JSON.stringify(data)})

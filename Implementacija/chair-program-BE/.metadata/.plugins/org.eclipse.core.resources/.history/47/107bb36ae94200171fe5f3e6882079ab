@@ -70,17 +70,9 @@ public class DocumentController  extends BaseRestController<Document, DocumentRe
 	 @RequestMapping(value = "/updateDoc", method = RequestMethod.POST)
 	  public @ResponseBody Integer updateDoc(@RequestParam("review") String review, @RequestParam("id") Long id) {
 		
-		 	
-			return documentRepository.setReview(review, id);
-
-	        }
-	
-	@CrossOrigin
-	 @RequestMapping(value = "/declineDoc", method = RequestMethod.POST)
-	  public @ResponseBody Integer declineDoc(@RequestParam("id") Long id) {
-		
-		 	
-			return documentRepository.resetReviewer(id);
+		 	//documentRepository.resetReviewer(id);
+		Long r=null;
+			return documentRepository.setReview(review,r, id);
 
 	        }
 	
