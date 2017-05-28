@@ -13,6 +13,7 @@ userService: Ember.inject.service(),
 		let regCharNumber = /^[\d]*[\w]+[\d]*$/;
 		this.set('errors',DS.Errors.create());
 		this.set("uspjesnoDodan", false);
+	  let regexEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 		if(this.get('user.firstName')==='' || this.get('user.firstName')===undefined){
 			this.get('errors').add('firstName','Input firstName!');
@@ -37,7 +38,7 @@ userService: Ember.inject.service(),
 			this.get('errors').add('password','Your password must be at least 8 characters and at least one number!');
 		}
 
-		if(this.get('user.email')==='' || this.get('user.email')===undefined){
+		if(this.get('user.email')==='' || this.get('user.email')===undefined || !this.get('user.email').match(regexEmail)){
 			this.get('errors').add('email','Input email!!');
 		}
 
