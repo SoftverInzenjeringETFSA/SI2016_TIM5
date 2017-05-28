@@ -54,7 +54,7 @@ public class AuthController {
         			 token= JwtService.issueToken(true,true);
         		}
         		else {
-        			token = JwtService.issueToken(true,true);
+        			token = JwtService.issueToken(false,false);
         			}
         		
 	            return ResponseEntity
