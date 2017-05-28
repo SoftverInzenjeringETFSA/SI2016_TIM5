@@ -4,11 +4,14 @@ import DS from 'ember-data';
 export default Ember.Component.extend({
 userService: Ember.inject.service(),
 	errors:DS.Errors.create(),
+	uspjesnoDodan : false,
+
 
 	validate: function(){
 		let regNumber = /\d+/;
 		let regCharNumber = /^[\d]*[\w]+[\d]*$/;
 		this.set('errors',DS.Errors.create());
+		this.set("uspjesnoDodan", false);
 
 		if(this.get('user.firstName')==='' || this.get('user.firstName')===undefined){
 			this.get('errors').add('firstName','Input firstName!');
@@ -36,6 +39,9 @@ userService: Ember.inject.service(),
 
 		if(this.get('user.email')==='' || this.get('user.email')===undefined){
 			this.get('errors').add('email','Input email!!');
+		}
+		if (this.get('errors.isEmpty')==true){
+			this.set('uspjesnoDodan', true);
 		}
 
 		return this.get('errors.isEmpty');

@@ -64,6 +64,10 @@
       </div>
 
       <button type="submit" class="btn btn-primary" {{action "submit"}}> Submit </button>
+      <br>
+      {{#if uspjesnoDodan}}
+      <p class = "md-txt" align = "justify"> Successful! {{model.cv}}</p>
+      {{/if}}
     </form>
     <br><br>
   </div>

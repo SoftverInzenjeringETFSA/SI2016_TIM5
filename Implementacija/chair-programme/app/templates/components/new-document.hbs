@@ -28,13 +28,13 @@
           {{#each errors.checkbox as |error|}}
           <span class="help-block">{{error.message}}</span>
           {{/each}}
-        </div>
-
-        </div>
-  <br>
-
-<br>
+            </div>
+            </div>
+  <br><br>
     <button type="submit" class="btn btn-primary" {{action "submit"}}> Submit </button>
+    {{#if uspjesno}}
+      <span class="help-block">New document successfully added!</span>
+    {{/if}}
   </form>
 <br><br>
 </div>

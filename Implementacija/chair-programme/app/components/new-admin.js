@@ -4,6 +4,7 @@ import DS from 'ember-data';
 export default Ember.Component.extend({
 userService: Ember.inject.service(),
 	errors:DS.Errors.create(),
+	uspjesnoDodan : false,
 	model: function() {
 		return Ember.RSVP.hash({
 			users: this.get('userService').all()
@@ -14,7 +15,7 @@ userService: Ember.inject.service(),
 		let regNumber = /\d+/;
 		let regCharNumber = /^[\d]*[\w]+[\d]*$/;
 		this.set('errors',DS.Errors.create());
-
+		this.set("uspjesnoDodan", false);
 		if(this.get('user.firstName')==='' || this.get('user.firstName')===undefined){
 			this.get('errors').add('firstName','Input firstName!');
 		}
@@ -45,7 +46,10 @@ userService: Ember.inject.service(),
 		if(this.get('user.note')!="SIAdmin" ){
 			this.get('errors').add('note','Input correct key word!');
 		}
-
+		if (this.get('errors.isEmpty')==true){
+			this.set('uspjesnoDodan', true);
+		}
+		
 		return this.get('errors.isEmpty');
 
 	},

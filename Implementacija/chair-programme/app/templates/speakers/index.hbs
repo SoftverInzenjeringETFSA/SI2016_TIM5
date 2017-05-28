@@ -1,30 +1,35 @@
-  {{log model.speaker}}
+{{log model.speaker}}
 
-  <section>
-      <div class="container">
-          <div class = "row">
-              <h1 class = "bg-txt">Speaker profile</h1>
-              <p class = "sm-txt" align = "justify">The following speaker will make reports at the IX annual conference for technology and
-                information security - Actis 2017.</p>
-              <br>
-              <br/>
-        </div>
+<section>
+  <div class="container">
+    <div class = "row">
+      <h1 class = "bg-txt">Speaker profile</h1>
+      <p class = "sm-txt" align = "justify">The following speaker will make reports at the IX annual conference for technology and
+        information security - Actis 2017.</p>
+      </div>
     </div>
   </section>
   {{#each model.speakers as |model|}}
 
   <section>
-      <div class="container">
-          <div class = "row">
-              <h1 class = "bg-txt">Speaker profile</h1>
+    <div class="container">
+      <div class = "row">
+        <h1 class = "bg-txt">Speaker profile</h1>
+        <div class="col-md-5">
+          <img class="img-responsive center-block" src={{model.imageLink}} alt="">
+        </div>
 
-  {{#link-to "speakers.show" model.id}}  <h2 class = "md-txt"> {{model.id}}. {{model.firstName}} {{model.lastName}}</h2> {{/link-to}}
-              <p class = "sm-txt" align = "justify"><b>Short bio:  </b> {{model.cv}}</p>
-               <p class = "sm-txt" align = "justify"><b>Abstract: </b>{{model.info}} </p>
-                <img src={{model.imageLink}} alt="">
-                <br/>
-          </div>
+        <div class="col-md-7">
+
+          {{#link-to "speakers.show" model.id}}  <h2 class = "md-txt"> {{model.id}}. {{model.firstName}} {{model.lastName}}</h2> {{/link-to}}
+          <p class = "sm-txt" align = "justify"><b>Short bio:  </b> {{model.cv}}</p>
+          <p class = "sm-txt" align = "justify"><b>Abstract: </b>{{model.info}} </p>
+
+          <br/>
+        </div>
+
       </div>
+    </div>
   </section>
   <br>
   {{/each}}

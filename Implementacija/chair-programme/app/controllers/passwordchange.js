@@ -8,6 +8,7 @@ export default Ember.Controller.extend({
   passwordGreska : false,
   oldPasswordGreska : false,
   passwordConfirmGreska : false,
+  uspjesno : false,
 
 
 // validacija starog i novo passworda
@@ -71,6 +72,7 @@ validation: function(oldpass, passwordConfirm){
 if(this.validation(oldpass, passwordConfirm)){
       this.update(_user.password,_user.id);
       this.get('notify').info("Password Successfully Changed!");
+      this.set("uspjesno",true);
       var previousTransition = this.get('previousTransition');
       if (previousTransition) {
         this.set('previousTransition', null);

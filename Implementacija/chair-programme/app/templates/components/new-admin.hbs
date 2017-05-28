@@ -67,9 +67,14 @@
         </div>
 
      <button type="submit" class="btn btn-primary" {{action "submit"}}> Submit </button>
+     <br>
+     {{#if uspjesnoDodan}}
+     <p class = "md-txt" align = "justify"> Successful! {{model.cv}}</p>
+     {{/if}}
       </form>
       <br>
       {{#link-to 'adminpage'}} 	<a class="btn btn-primary">Back to Admin Page</a> {{/link-to}}
+
 
     </div>
     <br><br>
