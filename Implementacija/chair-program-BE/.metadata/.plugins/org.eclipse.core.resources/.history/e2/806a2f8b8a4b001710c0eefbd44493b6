@@ -24,10 +24,10 @@ public interface DocumentRepository extends CrudRepository<Document, Long> {
 	@Query("select d from Document d where user_id=? and review is not NULL")
 	public List<Document> findUserReviewed( Long id);
 	
-	@Query("select d from Document d where reviewer_id is NULL and review is NULL")
+	@Query("select d from Document d where reviewer_id is NULL or review is NULL")
 	public List<Document> findDocsForReview();
 	
-	@Query("select d from Document d where reviewer_id=? and d.review IS NULL and is_approved=0")
+	@Query("select d from Document d where reviewer_id=? and d.review IS NULL")
 	public List<Document> findReviewerDocs(Long id);
 	
 	@Modifying(clearAutomatically = true)
@@ -52,4 +52,5 @@ public interface DocumentRepository extends CrudRepository<Document, Long> {
 	@Query("select d from Document d where reviewer_id=? and d.review IS NULL and is_approved=1")
 	public List<Document> findAcceptedReviewerDocs(Long id);
 	
+	findAcceptedReviewerDocs(id);
 }

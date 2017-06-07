@@ -78,10 +78,23 @@ export default BaseService.extend({
         return this.ajax({ url: "http://localhost:8080/documents/create", type: "POST", data: JSON.stringify(data)})
     },
 
+    acceptReview: function(id) {
+          return this.ajax({ url: "http://localhost:8080/documents/acceptDoc?id="+ id,type: "POST"});
+      },
 
     getReviewedDocs: function() {
         var dokuments = [];
         this.ajax({ url: "http://localhost:8080/documents/reviewedDocs", type: "GET" }).then(function(data) {
+            data.forEach(function(dokument) {
+                dokuments.addObject(dokument);
+            });
+        });
+        return dokuments;
+    },
+
+    getAcceptedReviewerDocs: function(id) {
+        var dokuments = []; // ovdje prazan objekat
+        this.ajax({ url: "http://localhost:8080/documents/acceptedReviewerDocs?id="+id, type: "GET" }).then(function(data) {
             data.forEach(function(dokument) {
                 dokuments.addObject(dokument);
             });

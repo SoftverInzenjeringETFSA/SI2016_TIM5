@@ -11,11 +11,8 @@
   <div class="md-txt col-md-9">
   <ul>
     {{#each model.docs as |model|}}
-    <li>Work:  <a href= {{model.documentLink}}> {{model.name}}  </a> - {{model.userId.lastName}}  </li>  &nbsp;&nbsp;
-    <li>   {{input  class="form-control" value=model.review
-      placeholder="Review"  }}
-
-       <button class="btn btn-primary" {{action 'submitReview' model.id model.review}}>Accept work</button>
+    <li>Work:  <a href= {{model.documentLink}}> {{model.name}}  </a> - {{model.userId.lastName}}
+       <button class="btn btn-primary" {{action 'acceptReview' model.id}}>Accept work</button>
       <button class="btn btn-primary" {{action 'declineReview' model.id }}>Decline work</button> &nbsp;&nbsp;
       {{#if declined}}
           <span class="help-block"> This assignment is declined. </span>
@@ -23,7 +20,7 @@
       {{#if accepted}}
           <span class="help-block">  Successful Document Review! </span>
       {{/if}}
-  </li>
+      </li>  
     <br>
   {{/each}}
   </ul>

@@ -91,15 +91,17 @@ public class DocumentController  extends BaseRestController<Document, DocumentRe
 	@CrossOrigin
 	@GetMapping(path="/acceptedReviewerDocs")
 	public @ResponseBody List<Document> getAcceptedReviewerDocs(@RequestParam("id") Long id) {
-		return documentRepository.findAcceptedReviewerDocs(id);
+		return documentRepository.findAcceptedReviewerDocs();
 	}
 	
 
 	@CrossOrigin
 	 @RequestMapping(value = "/acceptDoc", method = RequestMethod.POST)
-	  public @ResponseBody Integer acceptReview(@RequestParam("id") Long id) {	
-		return documentRepository.approveDoc(id);
+	  public @ResponseBody Integer declineDoc(@RequestParam("id") Long id) {	
+		return documentRepository.resetReviewer(id);
+
 	        }
 		
+	acceptDoc acceptReview(id)
 	
 }
