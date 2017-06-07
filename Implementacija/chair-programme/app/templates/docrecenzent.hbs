@@ -7,24 +7,19 @@
 <div class="container">
 <div class="row">
   <h1 class="bg-txt col-md-12">Assign document to reviewer</h1>
-  <div class="col-md-6">
-<div class="md-txt">Document</div>
-</div>
-<div class="col-md-6">
-<div class="md-txt">Reviewer</div>
-</div>
 <br><br>
 
 <form >
   <div class="row">
-
 <div class="col-md-6">
+  <div class="md-txt">Documents</div>
     {{#each model.dokuments as |doc|}}
     {{doc.id}}. {{doc.name}} - {{doc.userId.firstName}} {{doc.userId.lastName}}
     <br>
     {{/each}}
-</div>
+</div> <br>
 <div class="col-md-6">
+  <div class="md-txt">Reviewer</div>
   {{#each model.reviewers as |recezent|}}
   {{recezent.id}}.  {{recezent.firstName}} {{recezent.lastName}}
   <br>
