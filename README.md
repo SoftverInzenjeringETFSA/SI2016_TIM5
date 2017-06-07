@@ -8,7 +8,10 @@ Za korištenje Embera, potrebno je izvršiti sljedeće korake:
 Za korištenje Springa i baze, potrebno je izvršiti sljedeće korake:
 - instalirati Eclipse Neon.3, te putem Eclipse Marketplace-a instalirati: Spring IDE i Spring Tools Suite
 - instalirati MySql
-- za bazu podataka, potrebno je importovati init.sql skriptu i keirati usera sa podacima - username:EtfSI2016 i password:2016SIEtf kojem je potrebno dodijeliti sve privilegije
+- za bazu podataka, potrebno je importovati tim55.sql skriptu i keirati korisnika sa podacima:
+    username:EtfSI2016
+    password:2016SIEtf
+Kreiranom korisniku potrebno je dodijeliti sve privilegije za navedenu bazu.
 
 
 <br><br>
