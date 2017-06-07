@@ -102,4 +102,16 @@ export default BaseService.extend({
         return dokuments;
     },
 
+    getByName: function(name) {
+      var docs = [];
+      this.ajax({ url: "http://localhost:8080/documents/results?name="+name, type: "GET" }).then(function(data) {
+          data.forEach(function(dokument) {
+
+            console.log(dokument);
+              docs.addObject(dokument);
+          });
+      });
+      return docs;
+    },
+
 });

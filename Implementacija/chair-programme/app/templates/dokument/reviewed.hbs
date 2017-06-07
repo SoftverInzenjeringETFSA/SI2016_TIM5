@@ -1,5 +1,5 @@
 {{log model.dokuments}}
-{{log model.users}}
+{{log model.results}}
 
 <section>
   <div class="container">
@@ -8,6 +8,39 @@
     </div>
   </div>
 </section>
+
+<div class="container">
+  <div class="row">
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        {{input value=name placeholder="Search"}}
+      </div>
+      <button type="submit" class="btn btn-default"  {{action 'searchDocs' name}}>Submit</button>
+    </form>
+  </div>
+</div>
+
+{{#each model.results as |result|}}
+<section>
+  <div class="container">
+    <div class = "row">
+      <div class="col-md-2">
+        <img class="img-responsive center-block" src="assets/images/docLogo.png">
+      </div>
+        <div class="col-md-10">
+          <p class = "md-txt">  {{result.id}}. Document name: <a href= {{model.documentLink}}> {{result.name}}  </a></p>
+         <p class = "sm-txt" align = "justify"><b>Link:  </b> <a href= {{model.documentLink}}> {{result.documentLink}} </a> </p>
+      <p class = "sm-txt" align = "justify"><b>User:  </b> {{result.userId.firstName}} {{result.userId.lastName}}</p>
+      <p class = "sm-txt" align = "justify"><b>Reviewer:  </b> {{result.reviewerId.firstName}} {{result.reviewerId.lastName}}</p>
+      <p class = "sm-txt" align = "justify"><b>Review:  </b> {{result.review}} </p>
+
+    </div>
+    </div>
+  </div>
+</section>
+{{/each}}
+
+
 {{#each model.dokuments as |model|}}
 
 <section>

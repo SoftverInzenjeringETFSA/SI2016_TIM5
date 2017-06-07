@@ -54,6 +54,6 @@ public interface DocumentRepository extends CrudRepository<Document, Long> {
 	public List<Document> findAcceptedReviewerDocs(Long id);
 	
 	@Query("select d from Document d where d.name LIKE %:name%")
-	public List<Document> findByName(@Param("name")String name);
+	public List<User> findByName(@Param("name")String name);
 	
 }

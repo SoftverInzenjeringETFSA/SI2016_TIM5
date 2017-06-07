@@ -101,10 +101,5 @@ public class DocumentController  extends BaseRestController<Document, DocumentRe
 		return documentRepository.approveDoc(id);
 	        }
 		
-	@CrossOrigin
-	@GetMapping(path="/results")
-	public @ResponseBody List<Document> getByName(@RequestParam("name") String name) {
-		return documentRepository.findByName(name);
-	}
 	
 }
