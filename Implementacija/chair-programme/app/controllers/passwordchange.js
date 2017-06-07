@@ -21,6 +21,8 @@ validation: function(oldpass, passwordConfirm){
   this.set("oldPasswordGreska",false);
   this.set("oldPasswordGreska",false);
   this.set("passwordConfirmGreska",false);
+  this.set("uspjesno",false);
+
   let IncorrectPasswords = true;
 
 //regexi
@@ -37,7 +39,7 @@ validation: function(oldpass, passwordConfirm){
   }
 
 //provjera novog
-  if (this.get("model.neko.password") == "" || this.get("model.neko.password").length < 8 || this.get("model.neko.password").length > 20 || !this.get("model.neko.password").match(regNumber) || !this.get("model.neko.password").match(regCharNumber)){
+  if (this.get("model.neko.password") == "" || this.get("model.neko.password") == undefined || this.get("model.neko.password").length < 8 || this.get("model.neko.password").length > 20 || !this.get("model.neko.password").match(regNumber) || !this.get("model.neko.password").match(regCharNumber)){
       this.set("passwordGreska",true);
       IncorrectPasswords = false;
   }
@@ -73,14 +75,8 @@ if(this.validation(oldpass, passwordConfirm)){
       this.update(_user.password,_user.id);
       this.get('notify').info("Password Successfully Changed!");
       this.set("uspjesno",true);
-      var previousTransition = this.get('previousTransition');
-      if (previousTransition) {
-        this.set('previousTransition', null);
-        previousTransition.retry();
-      } else {
-        // Default back to homepage
-        this.transitionToRoute('index');
-      }    }
+      this.set(inputPassword, "");
+       }
 }}
 
 

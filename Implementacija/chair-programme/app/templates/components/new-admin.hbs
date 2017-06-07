@@ -9,7 +9,7 @@
           {{input  class="form-control" id="inputFirstname" value=user.firstName
           placeholder="First name"}}
           {{#each errors.firstName as |error|}}
-          <span class="help-block">{{error.message}}</span>
+          <span class="alert alert-danger">{{error.message}}</span>
           {{/each}}
         </div>
 
@@ -18,7 +18,7 @@
           {{input  class="form-control" id="inputLastname" value=user.lastName
           placeholder="Last name"}}
           {{#each errors.lastName as |error|}}
-          <span class="help-block">{{error.message}}</span>
+          <span class="alert alert-danger">{{error.message}}</span>
           {{/each}}
         </div>
 
@@ -44,7 +44,7 @@
           {{input type="email" class="form-control" id="inputEmail" value=user.email
           placeholder="Email"}}
           {{#each errors.email as |error|}}
-          <span class="help-block">{{error.message}}</span>
+          <span class="alert alert-danger">{{error.message}}</span>
           {{/each}}
         </div>
 
@@ -53,7 +53,7 @@
           {{input type="password" class="form-control" id="inputPassword" value=user.password
           placeholder="Password"}}
           {{#each errors.password as |error|}}
-          <span class="help-block">{{error.message}}</span>
+          <span class="alert alert-danger">{{error.message}}</span>
           {{/each}}
         </div>
 
@@ -62,14 +62,14 @@
           {{input class="form-control" type="password" value=user.note  id="inputNote"
           placeholder="Key word"}}
           {{#each errors.note as |error|}}
-          <span class="help-block">{{error.message}}</span>
+          <span class="alert alert-danger">{{error.message}}</span>
           {{/each}}
         </div>
 
      <button type="submit" class="btn btn-primary" {{action "submit"}}> Submit </button>
      <br>
      {{#if uspjesnoDodan}}
-     <p class = "md-txt" align = "justify"> Successful! {{model.cv}}</p>
+     <p class = "alert alert-success"> Successful! {{model.cv}}</p>
      {{/if}}
       </form>
       <br>

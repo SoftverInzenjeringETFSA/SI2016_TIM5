@@ -10,7 +10,7 @@
         <label for="inputFirstname">Ime</label>
         {{input  class="form-control" id="inputFirstname" value=user.firstName placeholder="Ime"}}
         {{#each errors.firstName as |error|}}
-        <span class="help-block">{{error.message}}</span>
+        <span class="alert alert-danger">{{error.message}}</span>
         {{/each}}
       </div>
 
@@ -18,7 +18,7 @@
         <label for="inputLastname">Prezime</label>
         {{input class="form-control" id="inputLastname" value=user.lastName placeholder="Prezime"}}
         {{#each errors.lastName as |error|}}
-        <span class="help-block">{{error.message}}</span>
+        <span class="alert alert-danger">{{error.message}}</span>
         {{/each}}
       </div>
 
@@ -26,7 +26,7 @@
         <label for="inputEmail">Email</label>
         {{input type="email" class="form-control" id="inputEmail" value=user.email placeholder="Email"}}
         {{#each errors.email as |error|}}
-        <span class="help-block">{{error.message}}</span>
+        <span class="alert alert-danger">{{error.message}}</span>
         {{/each}}
       </div>
 
@@ -34,7 +34,7 @@
         <label for="inputPassword">Password</label>
         {{input type="password" class="form-control" id="inputPassword" value=user.password placeholder="Password"}}
         {{#each errors.password as |error|}}
-        <span class="help-block">{{error.message}}</span>
+        <span class="alert alert-danger">{{error.message}}</span>
         {{/each}}
       </div>
 
@@ -66,7 +66,7 @@
       <button type="submit" class="btn btn-primary" {{action "submit"}}> Submit </button>
       <br>
       {{#if uspjesnoDodan}}
-      <p class = "md-txt" align = "justify"> Successful! {{model.cv}}</p>
+      <p class = "alert alert-success"> Successful! {{model.cv}}</p>
       {{/if}}
     </form>
     <br><br>

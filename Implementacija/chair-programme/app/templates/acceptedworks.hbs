@@ -18,10 +18,10 @@
        <button class="btn btn-primary" {{action 'submitReview' model.id model.review}}>Submit Review</button>
   </li>
   {{#if accepted}}
-      <span class="help-block">  Successful Document Review! </span>
+      <span class="alert alert-danger">  Successful Document Review! </span>
   {{/if}}
   {{#if greska}}
-      <span class="help-block"> Write review! </span>
+      <span class="alert alert-danger"> Write review! </span>
   {{/if}}
     <br>
   {{/each}}
