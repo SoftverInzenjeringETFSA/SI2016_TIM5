@@ -37,7 +37,8 @@ actions: {
           this.update(id, review);
           this.set("accepted",true);
           this.get('notify').info("Successful Document Review!");
-
+          alert("Successful Document Review!");
+          window.location.reload();
         }
 
   }

@@ -21,6 +21,8 @@ actions: {
           this.set("accepted",true);
           this.set("declined",false);
           this.get('notify').info("Document successfully accepted!");
+          alert("Document successfully accepted!");
+          window.location.reload();
   },
 
   declineReview: function(id){
@@ -29,6 +31,8 @@ actions: {
           this.set("accepted",false);
 
           this.get('notify').info("This assignment is declined!");
+          alert("Assigment is declined!");
+          window.location.reload();
 
 
   }

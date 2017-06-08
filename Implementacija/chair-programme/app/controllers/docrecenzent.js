@@ -81,13 +81,8 @@ actions: {
     if(this.validation(id, reviewerId)){
           this.update(reviewerId, id);
           this.get('notify').info("Successful!");
-    /*      var previousTransition = this.get('previousTransition');
-          if (previousTransition) {
-            this.set('previousTransition', null);
-            previousTransition.retry();
-          } else {
-            // Default back to homepage
-            this.transitionToRoute('index');*/
+          alert("Document successfully assigned to reviewer!");
+          window.location.reload();
          }
   }
 }

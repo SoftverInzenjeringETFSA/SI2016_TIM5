@@ -1,5 +1,0 @@
-package ba.actis.dto;
-
-public class JwtService {
-
-}

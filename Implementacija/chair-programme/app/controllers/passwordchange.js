@@ -75,7 +75,9 @@ if(this.validation(oldpass, passwordConfirm)){
       this.update(_user.password,_user.id);
       this.get('notify').info("Password Successfully Changed!");
       this.set("uspjesno",true);
-      this.set(inputPassword, "");
+      alert("Password Successfully Changed!");
+      window.location.reload();
+      
        }
 }}
 
