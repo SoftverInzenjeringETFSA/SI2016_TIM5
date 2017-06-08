@@ -27,9 +27,15 @@ validate: function(){
   actions:{
   submit: function(){
     if(this.validate()){
+      var dialog = window.confirm("Add document?");
+      if (dialog == true) {
+
       this.sendAction('action',this.dokument);
           console.log(this.dokument);
-}
+          alert("Document sent successfully!");
+                      window.location.reload();
+                    }
+          }
   }
 
 },

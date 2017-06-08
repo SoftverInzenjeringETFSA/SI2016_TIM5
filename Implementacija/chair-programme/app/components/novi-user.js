@@ -2,7 +2,7 @@ import Ember from 'ember';
 import DS from 'ember-data';
 
 export default Ember.Component.extend({
-userService: Ember.inject.service(),
+	userService: Ember.inject.service(),
 	errors:DS.Errors.create(),
 	uspjesnoDodan : false,
 
@@ -13,7 +13,7 @@ userService: Ember.inject.service(),
 		let regCharNumber = /^[\d]*[\w]+[\d]*$/;
 		this.set('errors',DS.Errors.create());
 		this.set("uspjesnoDodan", false);
-	  let regexEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+		let regexEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 		if(this.get('user.firstName')==='' || this.get('user.firstName')===undefined){
 			this.get('errors').add('firstName','Input firstName!');
@@ -62,12 +62,17 @@ userService: Ember.inject.service(),
 
 
 
-    actions:{
+	actions:{
 		submit: function(){
-		if(this.validate()){
-        this.sendAction('action',this.user);
-            console.log(this.user);
-            }
+			if(this.validate()){
+				var dialog = window.confirm("Register?");
+				if (dialog == true) {
+					this.sendAction('action',this.user);
+					console.log(this.user);
+					alert("Registration Successful!");
+					window.location.reload();
+				}
+			}
 		}
 
 	}

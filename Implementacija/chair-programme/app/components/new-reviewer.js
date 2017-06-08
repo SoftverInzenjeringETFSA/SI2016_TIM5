@@ -55,9 +55,14 @@ userService: Ember.inject.service(),
     actions:{
 		submit: function(){
 		if(this.validate()){
+			var dialog = window.confirm("Register?");
+			if (dialog == true) {
         this.sendAction('action',this.user);
             console.log(this.user);
-            }
+						alert("Reviewer successfully registered!!");
+							window.location.reload();
+						}
+      }
 		}
 
 	},

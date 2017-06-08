@@ -12,7 +12,8 @@ export default Ember.Controller.extend({
                     console.log(data);
                     Ember.set(this, 'errorMessage', '');
                     Ember.set(this, 'model', {});
-                    this.transitionToRoute('info');
+                    alert("Welcome");
+                    window.location.reload();
                 })
                 .catch(reason => {
                     Ember.set(this, 'errorMessage', JSON.parse(reason.responseText).errorMessage);
