@@ -5,7 +5,7 @@ Za korištenje Embera, potrebno je izvršiti sljedeće korake:
 - Frontend se pokreće sa komandom 'ember server' u command prompt-u
 - Backend se pokreće sa komandom 'mvn clean spring-boot:run' u command prompt-u
 
-<br><br>
+<br>
 Za korištenje Springa i baze, potrebno je izvršiti sljedeće korake:
 - instalirati Eclipse Neon.3, te putem Eclipse Marketplace-a instalirati: Spring IDE i Spring Tools Suite
 - instalirati MySql
@@ -17,9 +17,9 @@ Kreiranom korisniku potrebno je dodijeliti sve privilegije nad navedenom bazom.
 
 <br><br>
 Potrebna dokumentacija se nalazi u folderu <i>Dokumentacija</i>
-<br><br>
+<br>
 Završen je kompletan frontend aplikacije i smješten je u folderu </i>Implementacija/chair-programme</i>.
-<br><br>
+<br>
 Backend aplikacije je smješten je u folderu <i>Implementacija/chair-programme-be</i>. Kreirani su svi modeli, repozitoriji, kontroleri i potrebni servisi za ispravno implementiranje funkcionalnosti ove aplikacije.
 
 Za pokretanje aplikacije u Eclipse, odabrati Spring Boot App.
