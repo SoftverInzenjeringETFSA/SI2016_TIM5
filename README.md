@@ -24,11 +24,11 @@ Backend aplikacije je smješten je u folderu <i>Implementacija/chair-programme-b
 
 Za pokretanje aplikacije u Eclipse, odabrati Spring Boot App.
 
-Baza podataka je ažurirana u odnosu na model baze podataka prikazane u SRS-u. Dodani su potrebni podaci zahtijevani kao ulazu funkcionalnosti aplikacije. Struktura baze podataka je ostala ista.
+## Izmjene u implementaciji u odnosu na SRS
+* Baza podataka je ažurirana u odnosu na model baze podataka prikazane u SRS-u. Dodani su potrebni podaci zahtijevani kao ulazu funkcionalnosti aplikacije. Struktura baze podataka je ostala ista.
+* Speaker ne spada niti u jednu funkcionalnost koja se trebala implementirati. Nije se morao čuvati u bazi. Kreirane su stranice za dodavanje speakera, ali nisu urađene do kraja, jer to nije bilo potrebno. Zbog toga nije urađena ni sgurnost na stranicu kreiranje speaker-a.
+* Slanje korisničkog rada je implementirano, ali prema ERD-u kreiranom u SRS-u. Moguće je slanje rada uz link, te su iz tog razloga obezbijeđena input polja. Na ovaj način je implementirano zbog zahtjevanih atributa unutar tabele <i>Document</i> u bazi podataka.
 
-Speaker ne spada niti u jednu funkcionalnost koja se trebala implementirati. Nije se morao čuvati u bazi. Kreirane su stranice za dodavanje speakera, ali nisu urađene do kraja, jer to nije bilo potrebno. Zbog toga nije urađena ni sgurnost na stranicu kreiranje speaker-a.
-
-## <b> Funkcionalnost koja nije implementirana (<i>ISSUES</i>)</b>
+## Funkcionalnost koja nije implementirana (<i>ISSUES</i>)
 * Generisanje mailova potvrde/odbijenice dokumenta;
-
-* Slanje korisničkog rada je implementirano, ali prema ERD-u kreiranom u SRS-u. Moguće je slanje rada uz link, te su iz tog razloga obezbijeđena input polja. Na ovaj način je implementirano zbog zahtjevanih atributa unutar tabele <i>Document</i> u bazi podataka. <i>Nije moguć upload fajla sa računara korisnika, iako postoji dugme za to.</i>
+* Uz funkcionalnost slanje korisničkog rada: <i>Nije moguć upload fajla sa računara korisnika, iako postoji dugme za to.</i>
