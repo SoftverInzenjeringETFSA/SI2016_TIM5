@@ -4,7 +4,7 @@ Za korištenje Embera, potrebno je izvršiti sljedeće korake:
 - instalirati node.js, npm, i ember cli
 - Frontend se pokreće sa komandom 'ember server' u command prompt-u
 - Backend se pokreće sa komandom 'mvn clean spring-boot:run' u command prompt-u
-<br>
+<br><br>
 Za korištenje Springa i baze, potrebno je izvršiti sljedeće korake:
 - instalirati Eclipse Neon.3, te putem Eclipse Marketplace-a instalirati: Spring IDE i Spring Tools Suite
 - instalirati MySql
