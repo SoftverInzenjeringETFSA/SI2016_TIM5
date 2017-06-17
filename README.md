@@ -31,3 +31,8 @@ Za pokretanje aplikacije u Eclipse, odabrati Spring Boot App.
 ## Funkcionalnost koja nije implementirana (<i>ISSUES</i>)
 * Generisanje mailova potvrde/odbijenice dokumenta;
 * Uz funkcionalnost slanje korisničkog rada: <i>Nije moguć upload fajla sa računara korisnika, iako postoji dugme za to.</i>
+## Deploy
+*Frontend deployan na http://abashed-parent.surge.sh/
+*Backend deployan na https://chair-heroku.herokuapp.com/ ali izbacuje gresku zbog greske u bazi, koja zbog manjka vremena nije ispravljena
+*Baza je hostana na http://www.freesqldatabase.com : spring.datasource.url=jdbc:mysql://sql8.freesqldatabase.com:3306/sql8180743
+
